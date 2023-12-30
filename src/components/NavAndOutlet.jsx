@@ -5,7 +5,7 @@ import Footer from './Footer'
 function NavAndOutlet() {
     return <>
         <Nav />
-        <div className=''>
+        <div className='font-sans'>
             <Outlet />
         </div>
         <Footer />
