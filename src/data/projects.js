@@ -82,7 +82,7 @@ const projects = [
         image: portfolio,
         translate_y_percent: 'translate-y-[-65.5%]',
         source_code: "https://github.com/iamsuryasonar/portfolio-with-react.git",
-        build_info: "Built with NodeJs, HTML, CSS, React.",
+        build_info: "Built with JSX, Tailwind CSS, React.",
         title: "Portfolio",
         url: "https://iamsuryasonar.netlify.app",
         description:
@@ -97,10 +97,6 @@ const projects = [
             {
                 id: 'css',
                 icon: "fab fa-css3-alt",
-            },
-            {
-                id: 'node-js',
-                icon: "fab fa-node-js",
             },
         ],
         id: "tempmessage",
