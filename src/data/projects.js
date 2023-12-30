@@ -53,11 +53,11 @@ const projects = [
         image: notebook,
         translate_y_percent: 'translate-y-[-48%]',
         source_code: "https://github.com/iamsuryasonar/flutterNotes.git",
-        build_info: "Built with fluter, dart and Firebase realtime database.",
+        build_info: "Built with flutter, Dart and Firebase realtime database.",
         title: "NoteBook",
         url: "",
         description:
-            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes. Built with fluter, dart and Firebase realtime database.",
+            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes. Built with flutter, dart and firebase realtime database.",
     },
     {
         icons: [
@@ -86,7 +86,7 @@ const projects = [
         title: "Portfolio",
         url: "https://iamsuryasonar.netlify.app",
         description:
-            "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences. Built with NodeJs, HTML, CSS, React.",
+            "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences. Built with JSX, tailwind and React.",
     },
     {
         icons: [
