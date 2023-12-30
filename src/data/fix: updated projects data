@@ -149,7 +149,7 @@ const projects = [
         title: "CryptoRank",
         url: "",
         description:
-            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API, I enabled all cryptocurrencies to be displayed rankwise with its current value in US dolars and change percentage of  it in 24 hours. I used the VOLLEY library to fetch data from CoinCap API. Built with Java, XML, Volley library and Coincap Api.",
+            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API, I enabled all crypto currencies to be displayed rankwise with its current value in US dolars and change percentage of  it in 24 hours. I used the VOLLEY library to fetch data from CoinCap API. Built with Java, XML, Volley library and Coincap Api.",
     },
 ]
 
