@@ -8,15 +8,19 @@ const projects = [
     {
         icons: [
             {
+                id: 'js',
                 icon: "fab fa-js",
             },
             {
+                id: 'react',
                 icon: "fab fa-react",
             },
             {
+                id: 'node-js',
                 icon: "fab fa-node-js",
             },
             {
+                id: 'css',
                 icon: "fab fa-css3-alt",
             },
         ],
@@ -34,9 +38,11 @@ const projects = [
         id: "cryptorank",
         icons: [
             {
+                id: 'java',
                 icon: "fab fa-java",
             },
             {
+                id: 'android',
                 icon: "fab fa-android",
             },
         ],
@@ -52,9 +58,11 @@ const projects = [
         id: "notebook",
         icons: [
             {
+                id: 'java',
                 icon: "fab fa-java",
             },
             {
+                id: 'android',
                 icon: "fab fa-android",
             },
         ],
@@ -69,15 +77,19 @@ const projects = [
     {
         icons: [
             {
+                id: 'js',
                 icon: "fab fa-js",
             },
             {
+                id: 'react',
                 icon: "fab fa-react",
             },
             {
+                id: 'css',
                 icon: "fab fa-css3-alt",
             },
             {
+                id: 'node-js',
                 icon: "fab fa-node-js",
             },
         ],
@@ -93,12 +105,15 @@ const projects = [
     {
         icons: [
             {
+                id: 'js',
                 icon: "fab fa-js",
             },
             {
+                id: 'css',
                 icon: "fab fa-css3-alt",
             },
             {
+                id: 'node-js',
                 icon: "fab fa-node-js",
             },
         ],

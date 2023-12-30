@@ -3,6 +3,7 @@ import { faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons"
 import text from '../data/text'
 import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
+import media from '../data/media'
 
 function Home() {
     return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
@@ -12,8 +13,13 @@ function Home() {
                     <p className="text-4xl font-bold text-center md:text-6xl">{text.title}</p>
                     <p className="text-center text-xl">{text.introduction}</p>
                     <div className="flex flex-row justify-center md:justify-start gap-4 text-3xl">
-                        <FontAwesomeIcon icon={faGithub} />
-                        <FontAwesomeIcon icon={faLinkedin} />
+                        {media.map((item) => {
+                            return (
+                                <a target='_blank' rel='noopener noreferrer' href={item.url} key={item.id} className=''>
+                                    <FontAwesomeIcon className='text-3xl hover:scale-150 transition-all duration-300 ease-in-out' icon={item.icon} />
+                                </a>
+                            )
+                        })}
                     </div>
                 </div>
                 <div className="w-64 h-64 md:w-96 md:h-96 flex items-center ">
