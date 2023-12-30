@@ -4,7 +4,6 @@ import text from '../data/text'
 import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
-
 function Home() {
     return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-8 gap-10">
@@ -22,8 +21,8 @@ function Home() {
                         })}
                     </div>
                 </div>
-                <div className="w-64 h-64 md:w-96 md:h-96 flex items-center ">
-                    <img className="object-cover rounded-full " src={profilePicture}></img>
+                <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+                    <img className="w-[250px] h-[250px] object-cover rounded-full " src={profilePicture}></img>
                 </div>
             </div>
 

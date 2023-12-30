@@ -28,13 +28,13 @@ function Nav() {
     ]
 
     return <>
-        <div className="font-sans h-20 sticky top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white">
+        <div className="font-sans h-20 sticky top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white z-10">
             <a href="/#home" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out">iamsuryasonar.dev</a>
             <div className="hidden md:flex md:flex-row md:justify-between md:gap-4 text-xl">
                 {navItems.map((item) => {
                     return <a key={item.id} href={item.path} className="">{item.title}</a>
                 })}
-                <Link to="/links" >Links</Link>
+                <Link to="/links">Links</Link>
             </div>
             <FontAwesomeIcon className="text-2xl md:hidden hover:scale-150 transition-all duration-300 ease-in-out" icon={faBars} onClick={() => toggle()} />
         </div>
