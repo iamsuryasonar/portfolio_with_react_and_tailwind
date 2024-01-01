@@ -24,8 +24,8 @@ function Project({ image, projectName, projectDescription, source_code, live_url
                     })}
                 </div>
                 <div className="w-full flex flex-row justify-around">
-                    <a href={source_code} className=' bg-white'>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
-                    <a href={live_url} className=' bg-white '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                    <a href={source_code} className=' bg-white hover:text-blue-600 flex items-center gap-1 hover:gap-2'>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                    <a href={live_url} className=' bg-white hover:text-blue-600 flex items-center gap-1 hover:gap-2'>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                 </div>
             </div>
         </div>

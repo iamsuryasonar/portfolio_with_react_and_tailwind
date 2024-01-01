@@ -25,16 +25,21 @@ function Nav() {
             title: 'Projects',
             path: '/#projects'
         },
+        {
+            id: 4,
+            title: 'Gallery',
+            path: '/#gallery'
+        },
     ]
 
     return <>
-        <div className="font-sans h-20 sticky top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white z-10">
+        <div className="font-sans h-20 fixed top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white z-10">
             <a href="/#home" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out">iamsuryasonar<span className="text-blue-600">.dev</span></a>
-            <div className="hidden md:flex md:flex-row md:justify-between md:gap-4 text-xl">
+            <div className="hidden md:flex md:flex-row md:justify-between md:gap-4 text-base ">
                 {navItems.map((item) => {
-                    return <a key={item.id} href={item.path} className="">{item.title}</a>
+                    return <a key={item.id} href={item.path} className=" hover:text-blue-600 hover:underline underline-offset-4 ">{item.title}</a>
                 })}
-                <Link to="/links">Links</Link>
+                <Link to="/links" className="hover:text-blue-600 hover:underline underline-offset-4 ">Links</Link>
             </div>
             <FontAwesomeIcon className="text-2xl md:hidden hover:scale-150 transition-all duration-300 ease-in-out" icon={faBars} onClick={() => toggle()} />
         </div>

@@ -1,4 +1,3 @@
-import urlshare from '../assets/urlshare.png'
 import uniurl from '../assets/uniurl.png'
 import cryptorank from '../assets/cryptorank.jpg'
 import notebook from '../assets/notebook.jpg'

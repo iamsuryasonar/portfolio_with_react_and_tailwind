@@ -7,7 +7,7 @@ import media from '../data/media'
 function Home() {
     return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-8 gap-10">
-            <div className="flex flex-col-reverse md:flex-row items-center md:justify-center gap-8">
+            <div className="flex flex-col-reverse lg:flex-row items-center md:justify-center gap-8">
                 <div className="flex flex-col items-center gap-6 py-10">
                     <p className="text-4xl font-bold text-center md:text-6xl">iamsuryasonar<span className="text-blue-600">.dev</span></p>
                     <p className="text-center text-xl">{text.introduction}</p>
