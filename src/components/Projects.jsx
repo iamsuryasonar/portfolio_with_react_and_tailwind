@@ -17,7 +17,7 @@ function Project({ image, projectName, projectDescription, source_code, live_url
             </div>
             <div className={`h-full p-8 col-span-2 flex flex-col justify-evenly items-center gap-6 ${reverce_grid ? 'md:order-1' : 'md:order-2 md:place-self-end'}`}>
                 <p className="uppercase font-bold text-xl" >{projectName}</p>
-                <p className="text-l text-justify">{projectDescription}</p>
+                <p className="text-sm text-justify">{projectDescription}</p>
                 <div className="grid grid-cols-4 gap-6">
                     {icons.map((item) => {
                         return <button key={item.id} className='w-10 h-10 aspect-square rounded-full bg-white shadow-md'><FontAwesomeIcon icon={item.icon} /></button>

@@ -7,7 +7,7 @@ function About() {
             <div className="flex flex-col items-center md:items-start gap-4 col-start-4 col-span-4">
                 <p className="uppercase font-bold text-2xl text-blue-500">About Me</p>
                 <p className=" font-bold ">{text.about_title}</p>
-                <p className=" text-justify">{text.about_me}</p>
+                <p className="text-sm  text-justify">{text.about_me}</p>
             </div>
         </div>
     </section>
