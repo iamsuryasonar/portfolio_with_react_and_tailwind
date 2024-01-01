@@ -21,7 +21,7 @@ function Home() {
                         })}
                     </div>
                 </div>
-                <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+                <div className="w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
                     <img className="w-[250px] h-[250px] object-cover rounded-full " src={profilePicture}></img>
                 </div>
             </div>
