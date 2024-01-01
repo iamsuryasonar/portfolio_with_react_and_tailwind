@@ -29,7 +29,7 @@ function Home() {
             <div className="my-4 max-w-7xl flex flex-col items-center md:flex-row md:justify-start  gap-6">
                 <div className="flex md:flex-row flex-col text-2xl">
                     <p>Tech Stack </p>
-                    <span className="hidden md:grid">|</span>
+                    <span className="hidden md:grid px-1">|</span>
                     <div className="w-full h-[1px] bg-slate-600 md:hidden"></div>
                 </div>
                 <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-4">
