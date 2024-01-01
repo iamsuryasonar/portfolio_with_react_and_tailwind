@@ -41,12 +41,10 @@ html {
 
 .growline-animation {
     animation: growline 3s forwards;
-    /* Adjust the duration as needed */
 }
 
 .appear-animation {
     animation: fadeIn 1s;
-    /* Adjust the duration as needed */
 }
 
 .dot {
