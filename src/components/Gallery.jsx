@@ -16,7 +16,7 @@ function Gallery() {
             <div
                 className="md:columns-2 px-6 gap-4">
                 {gallery.map((item, index) => {
-                    return <span>
+                    return <span key={item.id}>
                         <div className='relative group w-full mb-4 grid place-content-center rounded-lg' key={item.id}>
                             <img className=' object-cover' src={item.image}></img>
                             <div className='absolute flex items-center justify-center  w-full h-full top-0 left-0 botton-0 right-0 bg-black opacity-0 group-hover:opacity-65 transition-opacity duration-300'>

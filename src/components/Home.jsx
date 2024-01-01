@@ -4,12 +4,26 @@ import text from '../data/text'
 import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
+
+import { useState } from 'react'
 function Home() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const onAnimationEnd = () => {
+        setIsVisible(true);
+    };
+
     return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-8 gap-10">
             <div className="flex flex-col-reverse lg:flex-row items-center md:justify-center gap-8">
                 <div className="flex flex-col items-center gap-6 py-10">
-                    <p className="text-4xl font-bold text-center md:text-6xl">iamsuryasonar<span className="text-blue-600">.dev</span></p>
+                    <div className="flex flex-col gap-2 ">
+                        <p className="text-4xl font-bold text-center md:text-6xl ">iamsuryasonar<span className="text-blue-600">.dev</span></p>
+                        <div className="flex flex-row items-center" >
+                            <div className={`mx-2 h-2 rounded-full bg-black growline-animation `} onAnimationEnd={onAnimationEnd}></div>
+                            {isVisible ? <div className="w-3 h-3 rounded-full bg-blue-600"></div> : <div className="w-3 h-3"></div>}
+                        </div>
+                    </div>
                     <p className="text-center text-xl">{text.introduction}</p>
                     <div className="flex flex-row justify-center md:justify-start gap-4 text-3xl">
                         {media.map((item) => {
@@ -39,7 +53,7 @@ function Home() {
                 </div>
             </div>
         </div>
-    </section>
+    </section >
 }
 
 export default Home;

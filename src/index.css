@@ -18,3 +18,41 @@ html {
         animation: rotateGradient 5s linear infinite;
     }
 }
+
+@keyframes growline {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.growline-animation {
+    animation: growline 3s forwards;
+    /* Adjust the duration as needed */
+}
+
+.appear-animation {
+    animation: fadeIn 1s;
+    /* Adjust the duration as needed */
+}
+
+.dot {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+}
