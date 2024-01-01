@@ -53,11 +53,11 @@ const projects = [
         image: notebook,
         translate_y_percent: 'translate-y-[-48%]',
         source_code: "https://github.com/iamsuryasonar/flutterNotes.git",
-        build_info: "Built with fluter, dart and Firebase realtime database.",
+        build_info: "Built with flutter, Dart and Firebase realtime database.",
         title: "NoteBook",
         url: "",
         description:
-            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes. Built with fluter, dart and Firebase realtime database.",
+            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes. Built with flutter, dart and firebase realtime database.",
     },
     {
         icons: [
@@ -82,11 +82,11 @@ const projects = [
         image: portfolio,
         translate_y_percent: 'translate-y-[-65.5%]',
         source_code: "https://github.com/iamsuryasonar/portfolio-with-react.git",
-        build_info: "Built with NodeJs, HTML, CSS, React.",
+        build_info: "Built with JSX, Tailwind CSS, React.",
         title: "Portfolio",
         url: "https://iamsuryasonar.netlify.app",
         description:
-            "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences. Built with NodeJs, HTML, CSS, React.",
+            "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences. Built with JSX, tailwind and React.",
     },
     {
         icons: [
@@ -97,10 +97,6 @@ const projects = [
             {
                 id: 'css',
                 icon: "fab fa-css3-alt",
-            },
-            {
-                id: 'node-js',
-                icon: "fab fa-node-js",
             },
         ],
         id: "tempmessage",
@@ -153,7 +149,7 @@ const projects = [
         title: "CryptoRank",
         url: "",
         description:
-            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API, I enabled all cryptocurrencies to be displayed rankwise with its current value in US dolars and change percentage of  it in 24 hours. I used the VOLLEY library to fetch data from CoinCap API. Built with Java, XML, Volley library and Coincap Api.",
+            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API, I enabled all crypto currencies to be displayed rankwise with its current value in US dolars and change percentage of  it in 24 hours. I used the VOLLEY library to fetch data from CoinCap API. Built with Java, XML, Volley library and Coincap Api.",
     },
 ]
 
