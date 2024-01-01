@@ -44,7 +44,6 @@ function Nav() {
                 {navItems.map((item) => {
                     return <a key={item.id} href={item.path} className=" hover:text-blue-600 hover:underline underline-offset-4 ">{item.title}</a>
                 })}
-                //<a href="/links" className="hover:text-blue-600 hover:underline underline-offset-4 ">Links</a>
             </div>
             <FontAwesomeIcon className="text-2xl md:hidden hover:scale-150 transition-all duration-300 ease-in-out" icon={faBars} onClick={() => toggle()} />
         </div>
@@ -53,7 +52,6 @@ function Nav() {
             {navItems.map((item) => {
                 return <a key={item.id} href={item.path} onClick={() => toggle()} className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">{item.title} </a>
             })}
-            //<a href="/links" className="hover:scale-150 transition-all duration-300 ease-in-out text-2xl" onClick={() => toggle()}>Links</a>
         </div>}
 
     </>
