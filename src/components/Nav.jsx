@@ -39,7 +39,7 @@ function Nav() {
                 {navItems.map((item) => {
                     return <a key={item.id} href={item.path} className="text-base hover:text-blue-600 hover:underline underline-offset-4 ">{item.title}</a>
                 })}
-                {/* <Link to='/links' className="text-base hover:text-blue-600 hover:underline underline-offset-4 ">Links</Link> */}
+                <Link to='/links' className="text-base hover:text-blue-600 hover:underline underline-offset-4 ">Links</Link>
             </div>
             <FontAwesomeIcon className="text-2xl md:hidden hover:scale-150 transition-all duration-300 ease-in-out" icon={faBars} onClick={() => toggle()} />
         </div>
@@ -48,7 +48,7 @@ function Nav() {
             {navItems.map((item) => {
                 return <a key={item.id} href={item.path} onClick={() => toggle()} className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">{item.title} </a>
             })}
-            {/* <Link to='/links' className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">Links</Link> */}
+            <Link to='/links' className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">Links</Link>
         </div>}
 
     </>

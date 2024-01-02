@@ -87,7 +87,7 @@ const projects = [
         ],
         id: "portfolio",
         image: portfolio,
-        translate_y_percent: 'translate-y-[-65.5%]',
+        translate_y_percent: 'translate-y-[-73%]',
         source_code: "https://github.com/iamsuryasonar/portfolio_with_react_and_tailwind.git",
         build_info: "Built with Tailwind CSS, React.",
         title: "Portfolio",
