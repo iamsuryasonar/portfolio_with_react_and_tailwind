@@ -15,21 +15,21 @@ function Gallery() {
                 </div>
             </div>
             <div
-                className=" grid grid-cols-1 md:grid-cols-2 px-6 gap-4">
-                {/* className='px-6 gap-4 columns-1 md:columns-2 '> */}
+                //another layout - grid grid-cols-1 md:grid-cols-2 px-6 gap-4
+                //current layout - masonry layout
+                className="columns-1 md:columns-2 px-6 gap-4">
                 {gallery.map((item, index) => {
-                    return <span key={item.id} className={` ${index === 0 ? 'self-end' : ''}`}>
-                        <div className='relative group w-full h-full  grid  rounded-lg' key={item.id}>
-                            <img className={`object-cover`} src={item.image} loading='lazy'></img>
-                            <div className='absolute flex items-center justify-center  w-full h-full top-0 left-0 botton-0 right-0 bg-black opacity-0 group-hover:opacity-65 transition-opacity duration-300'>
+                    return (
+                        <div className='w-full h-full mb-4 relative grid rounded-lg' key={item.id}>
+                            <img src={item.image} loading='lazy'></img>
+                            <div className='grid place-content-center absolute top-0 left-0 right-0 bottom-0  bg-black opacity-0 hover:opacity-65 transition-opacity duration-300'>
                                 <div className='grid p-6'>
                                     <p className='place-self-end text-white font-normal font-base' >{item.quote}</p>
                                     <p className='place-self-end text-white font-light text-sm'><FontAwesomeIcon icon={faLocationDot} /> {item.location}</p>
                                 </div>
                             </div>
                         </div>
-
-                    </span>
+                    )
                 })}
             </div>
         </div>
