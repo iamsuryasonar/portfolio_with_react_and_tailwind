@@ -15,8 +15,7 @@ function Gallery() {
                 </div>
             </div>
             <div
-                // md:columns-2
-                className="grid px-6 gap-4">
+                className="md:columns-2 px-6 gap-4">
                 {gallery.map((item, index) => {
                     return <span key={item.id}>
                         <div className='relative group w-full mb-4 grid place-content-center rounded-lg' key={item.id}>
