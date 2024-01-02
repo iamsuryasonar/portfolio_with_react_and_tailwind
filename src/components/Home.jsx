@@ -6,11 +6,11 @@ import media from '../data/media'
 
 import { useState } from 'react'
 function Home() {
-    const [isVisible, setIsVisible] = useState(false);
+    // const [isVisible, setIsVisible] = useState(false);
 
-    const onAnimationEnd = () => {
-        setIsVisible(true);
-    };
+    // const onAnimationEnd = () => {
+    //     setIsVisible(true);
+    // };
 
     return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-8 gap-10">
@@ -19,8 +19,9 @@ function Home() {
                     <div className="flex flex-col gap-2 ">
                         <p className="text-4xl font-bold text-center md:text-6xl ">iamsuryasonar<span className="text-blue-600">.dev</span></p>
                         <div className="flex flex-row items-center" >
-                            <div className={`mr-2 h-2 rounded-full bg-black growline-animation `} onAnimationEnd={onAnimationEnd}></div>
-                            {isVisible ? <div className="w-3 h-3 rounded-full bg-blue-600"></div> : <div className="w-3 h-3"></div>}
+                            <div className={`mr-2 h-2 rounded-full bg-black growline-animation `} ></div>
+                            {/* onAnimationEnd={onAnimationEnd}
+                            {isVisible ? <div className="w-3 h-3 rounded-full bg-blue-600"></div> : <div className="w-3 h-3"></div>} */}
                         </div>
                     </div>
                     <p className="text-center text-xl">{text.introduction}</p>
