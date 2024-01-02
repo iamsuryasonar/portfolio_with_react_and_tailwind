@@ -14,7 +14,7 @@ function Gallery() {
                     <span className='place-self-end text-slate-500 font-light'>- Ansel Adam</span>
                 </div>
             </div>
-            <div
+            {/* <div
                 className="md:columns-2 px-6 gap-4">
                 {gallery.map((item, index) => {
                     return <span key={item.id}>
@@ -30,7 +30,7 @@ function Gallery() {
 
                     </span>
                 })}
-            </div>
+            </div> */}
         </div>
 
     </section>

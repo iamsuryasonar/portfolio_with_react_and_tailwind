@@ -1,7 +1,7 @@
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Home from "../components/Home";
-// import Gallery from "../components/Gallery";
+import Gallery from "../components/Gallery";
 
 
 function HomePage() {
@@ -9,7 +9,7 @@ function HomePage() {
         <Home />
         <About />
         <Projects />
-        {/* <Gallery /> */}
+        <Gallery />
     </>
 }
 
