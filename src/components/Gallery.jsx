@@ -14,10 +14,9 @@ function Gallery() {
                     <span className='place-self-end text-slate-500 font-light'>- Ansel Adam</span>
                 </div>
             </div>
-            {/* md:columns-2 */}
             <div
-                // className=" grid grid-cols-1 md:grid-cols-2 grid-rows-masonry px-6 gap-4">
-                className='px-6  gap-4 columns-1 md:columns-2 '>
+                className=" grid grid-cols-1 md:grid-cols-2 px-6 gap-4">
+                {/* className='px-6 gap-4 columns-1 md:columns-2 '> */}
                 {gallery.map((item, index) => {
                     return <span key={item.id} className={` ${index === 0 ? 'self-end' : ''}`}>
                         <div className='relative group w-full mb-4 grid  rounded-lg' key={item.id}>
