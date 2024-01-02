@@ -2,6 +2,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import gallery from '../data/gallery'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 function Gallery() {
+
     return <section id='gallery' className="py-16 min-h-svh w-full  flex flex-col items-center gap-16 ">
         <div className='max-w-3xl '>
             <div className="p-6 flex flex-col items-center">

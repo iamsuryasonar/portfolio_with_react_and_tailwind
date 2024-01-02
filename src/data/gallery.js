@@ -1,4 +1,4 @@
-import bottle from '../assets/gallery/bottle.jpg'
+// import bottle from '../assets/gallery/bottle.jpg'
 import roadside_rythm from '../assets/gallery/roadside_rythm.jpg'
 import forever from '../assets/gallery/forever.jpg'
 import caterpillar from '../assets/gallery/caterpillar.jpg'

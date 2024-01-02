@@ -19,7 +19,7 @@ function LinkPage() {
                 </div >
                 {links.map((link) => {
                     return (
-                        <div className='w-11/12 hover:w-full p-10 bg-slate-200  flex justify-center items-center transition-all duration-300 ease-in-out'>
+                        <div key={link.id} className='w-11/12 hover:w-full p-10 bg-slate-200  flex justify-center items-center transition-all duration-300 ease-in-out'>
                             <a target='_blank'
                                 rel='noopener noreferrer'
                                 href={link.url}
