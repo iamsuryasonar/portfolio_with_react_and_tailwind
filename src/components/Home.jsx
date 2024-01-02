@@ -19,10 +19,10 @@ function Home() {
                 <div className="flex flex-col items-center gap-6 py-10">
                     <div className="flex flex-col gap-2 ">
                         <p className="text-4xl font-bold text-center md:text-6xl ">iamsuryasonar<span className="text-blue-600">.dev</span></p>
-                        <div className="flex flex-row items-center" >
+                        {/* <div className="flex flex-row items-center" >
                             <div className={`mr-2 h-2 rounded-full bg-black growline-animation `} onAnimationEnd={onAnimationEnd}></div>
                             {isVisible ? <div className="w-3 h-3 rounded-full bg-blue-600"></div> : <div className="w-3 h-3"></div>}
-                        </div>
+                        </div> */}
                     </div>
                     <p className="text-center text-xl">{text.introduction}</p>
                     <div className="flex flex-row justify-center md:justify-start gap-4 text-3xl">

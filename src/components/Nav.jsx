@@ -2,13 +2,13 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
 function Nav() {
     const [menu, setMenu] = useState(false);
 
     const toggle = () => {
         setMenu(!menu);
     };
-
     let navItems = [
         {
             id: 1,
@@ -31,15 +31,15 @@ function Nav() {
             path: '/#gallery'
         },
         {
-            id:5,
-            title:'Links',
-            path:'/links'
+            id: 5,
+            title: 'Links',
+            path: '/links'
         },
     ]
 
     return <>
         <div className="font-sans h-20 fixed top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white z-10">
-            <Link to="/#home" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out">iamsuryasonar<span className="text-blue-600">.dev</span></Link>
+            <Link to="/" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out">iamsuryasonar<span className="text-blue-600">.dev</span></Link>
             <div className="hidden md:flex md:flex-row md:justify-between md:gap-4 text-base ">
                 {navItems.map((item) => {
                     return <a key={item.id} href={item.path} className=" hover:text-blue-600 hover:underline underline-offset-4 ">{item.title}</a>
