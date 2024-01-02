@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function LinkPage() {
     return <>
 
-        <section className=' w-full h-svh bg-slate-50 flex justify-center'>
+        <section className=' w-full min-h-svh bg-slate-50 flex justify-center'>
             <div className='py-24 max-w-4xl w-full  flex flex-col items-center gap-6'>
                 <p className='text-3xl '>Links</p>
                 <div className=' flex flex-row justify-center gap-4'>
