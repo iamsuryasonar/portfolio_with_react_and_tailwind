@@ -14,12 +14,13 @@ function Gallery() {
                     <span className='place-self-end text-slate-500 font-light'>- Ansel Adam</span>
                 </div>
             </div>
+            {/* md:columns-2 */}
             <div
-                className="md:columns-2 px-6 gap-4">
+                className=" grid grid-cols-1 md:grid-cols-2 grid-rows-masonry px-6 gap-4">
                 {gallery.map((item, index) => {
-                    return <span key={item.id}>
-                        <div className='relative group w-full mb-4 grid place-content-center rounded-lg' key={item.id}>
-                            <img className='object-cover' src={item.image} loading='lazy'></img>
+                    return <span key={item.id} className={` ${index === 0 ? 'self-end' : ''}`}>
+                        <div className='relative group w-full mb-4 grid  rounded-lg' key={item.id}>
+                            <img className={`object-cover ${index === 0 ? 'self-end' : ''}`} src={item.image} loading='lazy'></img>
                             <div className='absolute flex items-center justify-center  w-full h-full top-0 left-0 botton-0 right-0 bg-black opacity-0 group-hover:opacity-65 transition-opacity duration-300'>
                                 <div className='grid p-6'>
                                     <p className='place-self-end text-white font-normal font-base' >{item.quote}</p>
