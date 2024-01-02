@@ -1,9 +1,9 @@
-import uniurl from '../assets/uniurl.png'
-import cryptorank from '../assets/cryptorank.jpg'
-import notebook from '../assets/notebook.jpg'
-import portfolio from '../assets/portfolio.png'
-import temp_message from '../assets/temp_message.png'
-import weatherapp from '../assets/weatherapp.jpg'
+import uniurl from '../assets/projects/uniurl.jpg'
+import cryptorank from '../assets/projects/cryptorank.jpg'
+import notebook from '../assets/projects/notebook.jpg'
+import portfolio from '../assets/projects/portfolio.jpg'
+import temp_message from '../assets/projects/temp_message.jpg'
+import weatherapp from '../assets/projects/weatherapp.jpg'
 
 const projects = [
     {
