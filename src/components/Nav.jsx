@@ -30,11 +30,11 @@ function Nav() {
             title: 'Gallery',
             path: '/#gallery'
         },
-        {
-            id: 5,
-            title: 'Links',
-            path: '/links'
-        },
+        // {
+        //     id: 5,
+        //     title: 'Links',
+        //     path: '/links'
+        // },
     ]
 
     return <>
