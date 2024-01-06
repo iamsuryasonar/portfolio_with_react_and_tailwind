@@ -48,7 +48,7 @@ function Nav() {
             {navItems.map((item) => {
                 return <a key={item.id} href={item.path} onClick={() => toggle()} className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">{item.title} </a>
             })}
-            <Link to='/links' className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">Links</Link>
+            <Link onClick={() => toggle()}  to='/links' className="text-2xl hover:scale-150 transition-all duration-300 ease-in-out">Links</Link>
         </div>}
 
     </>
