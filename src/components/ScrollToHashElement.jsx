@@ -1,4 +1,4 @@
-import { useMemo, useEffect } from "react";
+import { useMemo, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToHashElement = () => {
@@ -19,7 +19,7 @@ const ScrollToHashElement = () => {
     }
   }, [location]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hashElement) {
       hashElement.scrollIntoView({
         behavior: "smooth",
