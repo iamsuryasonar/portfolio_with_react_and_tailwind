@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const ScrollToHashElement = () => {
   const location = useLocation();
-  const scrollContainerRef = useRef(null);
+  const hashElementRef = useRef(null);
 
   const hashElement = useMemo(() => {
     const hash = location.hash;
@@ -18,40 +18,33 @@ const ScrollToHashElement = () => {
 
   useEffect(() => {
     if (hashElement) {
-      const scrollContainer = scrollContainerRef.current || window;
+      hashElementRef.current = hashElement;
+
       const scrollOptions = {
         behavior: "smooth",
         inline: "nearest",
       };
 
-      if (scrollContainer.scrollTo) {
-        // Use scroll container's scrollTo method if available
-        scrollContainer.scrollTo(scrollOptions);
-      } else {
-        // Fallback to window.scrollTo for compatibility
-        window.scrollTo(scrollOptions);
-      }
+      window.scrollTo(scrollOptions);
     }
   }, [hashElement]);
 
-  // Use useLayoutEffect to ensure the DOM is updated before scrolling
   useLayoutEffect(() => {
-    if (hashElement) {
-      const scrollContainer = scrollContainerRef.current || window;
+    if (hashElementRef.current) {
+      const scrollContainer = window;
+      const hashElement = hashElementRef.current;
+
       hashElement.scrollIntoView({
         behavior: "smooth",
         inline: "nearest",
         block: "start",
       });
 
-      // Ensure the container scrolls after the layout effect
-      setTimeout(() => {
-        scrollContainer.scrollTo(0, hashElement.offsetTop);
-      }, 0);
+      scrollContainer.scrollTo(0, hashElement.offsetTop);
     }
-  }, [hashElement]);
+  }, []);
 
-  return <div ref={scrollContainerRef}></div>;
+  return null; // No need for an extra div in the rendered output
 };
 
 export default ScrollToHashElement;
