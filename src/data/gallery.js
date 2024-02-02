@@ -5,15 +5,16 @@ import caterpillar from '../assets/gallery/caterpillar.jpg'
 import beautifulEyes from '../assets/gallery/beautifulEyes.jpg'
 import glitteringSand from '../assets/gallery/glitteringSand.jpg'
 import humanEvolution from '../assets/gallery/human-evolution.jpg'
+import bamboobasket from '../assets/gallery/bamboobasket.jpg'
+import keyboard from '../assets/gallery/keyboard.jpg'
 
 const gallery = [
     {
-        id: "humanEvolution",
-        quote: "Four figures stepping out of the water, a symbolic depiction of human evolution and the eternal cycle of rebirth",
+        id: "keyboard",
+        quote: "Unleashing creativity one key at a time.",
         location: "Assam, India",
-        image: humanEvolution,
+        image: keyboard,
     },
-
     {
         id: "roadside_rythm",
         quote: "Witness the dance of trees as seen through the lens of a passing car.",
@@ -21,22 +22,28 @@ const gallery = [
         image: roadside_rythm,
     },
     {
+        id: "humanEvolution",
+        quote: "Four figures stepping out of the water, a symbolic depiction of human evolution and the eternal cycle of rebirth",
+        location: "Assam, India",
+        image: humanEvolution,
+    },
+    {
         id: "forever",
         quote: "Lost in thought, a couple peers into the distance, where the unseen horizon becomes a canvas for their shared aspirations.",
         location: "Assam, India",
         image: forever,
     },
-    // {
-    //     id: "bottle",
-    //     quote: "UNIURL - a link sharing platform",
-    //     location: "Guwahati, Assam",
-    //     image: bottle,
-    // },
     {
         id: "beautifulEyes",
         quote: "Through a charming pose, a child reveals a world of innocence.",
         location: "Assam, India",
         image: beautifulEyes,
+    },
+    {
+        id: "caterpillar",
+        quote: "A tiny warrior with Spider-Man eyes",
+        location: "Assam, India",
+        image: caterpillar,
     },
     {
         id: "glitteringSand",
@@ -45,13 +52,11 @@ const gallery = [
         image: glitteringSand,
     },
     {
-        id: "caterpillar",
-        quote: "A tiny warrior with Spider-Man eyes",
+        id: "bamboobasket",
+        quote: "Embracing the beauty of nature. A touch of tranquility captured in a green woven bamboo basket, surrounded by the whispers of lush leaves.",
         location: "Assam, India",
-        image: caterpillar,
+        image: bamboobasket,
     },
-
-
 ]
 
 export default gallery;
