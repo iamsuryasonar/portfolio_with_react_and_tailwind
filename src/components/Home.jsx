@@ -3,10 +3,15 @@ import text from '../data/text'
 import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
-
 import { useState } from 'react'
+
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
+    const [loadedImages, setLoadedImages] = useState([]);
+
+    const handleImageLoad = (index) => {
+        setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
+    };
 
     const onAnimationEnd = () => {
         setIsVisible(true);
@@ -34,8 +39,10 @@ function Home() {
                         })}
                     </div>
                 </div>
-                <div className="w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
-                    <img className="w-[250px] h-[250px] object-cover rounded-full " src={profilePicture}></img>
+                <div className=" w-64 h-64 md:w-96 md:h-96  flex items-center justify-center">
+                    <div className={`w-[250px] h-[250px] rounded-full  ${loadedImages.includes(profilePicture) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
+                        <img className={`w-[250px] h-[250px] object-cover rounded-full ${loadedImages.includes(profilePicture) ? 'block' : ' hidden'}`} src={profilePicture} onLoad={() => handleImageLoad(profilePicture)}></img>
+                    </div>
                 </div>
             </div>
 
@@ -47,7 +54,9 @@ function Home() {
                 </div>
                 <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-4">
                     {skills.map((item) => {
-                        return <img key={item.id} className="w-10 h-10 text-2xl hover:scale-150 transition-all duration-300 ease-in-out" src={item.image}></img>
+                        return <div key={item.id} className={`w-10 h-10 text-2xl rounded-full hover:scale-150 transition-all duration-300 ease-in-out ${loadedImages.includes(item.id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `} >
+                            <img src={item.image} className={`object-cover rounded-sm aspect-square ${loadedImages.includes(item.id) ? ' block' : ' hidden'}`} onLoad={() => handleImageLoad(item.id)} />
+                        </div>
                     })}
                 </div>
             </div>

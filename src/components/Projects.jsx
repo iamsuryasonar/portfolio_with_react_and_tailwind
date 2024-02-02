@@ -3,19 +3,28 @@ import { faLaptopCode, faRightToBracket } from "@fortawesome/free-solid-svg-icon
 import projects from "../data/projects";
 import text from '../data/text'
 import { useState } from 'react'
-function Project({ image, projectName, projectDescription, source_code, live_url, techs, translate_y_percent, reverce_grid }) {
+
+function Project({ id, image, projectName, projectDescription, source_code, live_url, techs, translate_y_percent, reverse_grid }) {
     const [isHover, setHover] = useState(false);
+    const [loadedImages, setLoadedImages] = useState([]);
+
+    const handleImageLoad = (index) => {
+        setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
+    };
+
 
     return <div className="max-w-4xl mx-6 flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-4 p-4 bg-white rounded-lg shadow-lg md:grid md:grid-cols-6 "  >
-            <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverce_grid ? 'md:order-2 md:place-self-end' : 'md:order-1 '}`}>
-                <img className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`} src={image}
+            <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
+                <img className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
+                    src={image}
+                    loading='lazy'
+                    onLoad={() => handleImageLoad(id)}
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
-                >
-                </img>
+                ></img>
             </div>
-            <div className={`max-w-96 h-full p-8 col-span-3 flex flex-col justify-evenly items-center gap-6 ${reverce_grid ? 'md:order-1' : 'md:order-2 md:place-self-end'}`}>
+            <div className={`max-w-96 h-full p-8 col-span-3 flex flex-col justify-evenly items-center gap-6 ${reverse_grid ? 'md:order-1' : 'md:order-2 md:place-self-end'}`}>
                 <p className="uppercase font-bold text-xl" >{projectName}</p>
                 <p className="text-base text-slate-500 text-justify">{projectDescription}</p>
                 <div className="w-full grid-row">
@@ -42,7 +51,7 @@ function Projects() {
                 <p className="place-self-start text-xl font-medium ">{text.project_quote}</p>
             </div>
             {projects.map((item, index) => {
-                return <Project key={item.id} image={item.image} projectName={item.title} projectDescription={item.description} source_code={item.source_code} live_url={item.url} techs={item.techs} translate_y_percent={item.translate_y_percent} reverce_grid={index % 2 != 0 ? true : false} />
+                return <Project key={item.id} id={item.id} image={item.image} projectName={item.title} projectDescription={item.description} source_code={item.source_code} live_url={item.url} techs={item.techs} translate_y_percent={item.translate_y_percent} reverse_grid={index % 2 != 0 ? true : false} />
             })}
 
         </section>

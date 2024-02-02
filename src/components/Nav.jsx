@@ -45,13 +45,15 @@ function Nav() {
         </div>
         {menu && <div className='bg-white flex flex-col justify-center items-center gap-6 fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'>
             <FontAwesomeIcon className="text-3xl fixed top-7 right-10 hover:scale-150 transition-all duration-300 ease-in-out " icon={faXmark} onClick={() => toggle()} />
+            <div className="h-[1px] bg-slate-200 w-11/12 place-self-end"></div>
             {navItems.map((item) => {
                 return <>
-                    <a key={item.id} href={item.path} onClick={() => toggle()} className="overflow-hidden text-4xl hover:text-blue-500 transition-all duration-300 ease-in-out">{item.title} </a>
-                    <div className="h-[1px] bg-slate-200 w-2/4 "></div>
+                    <a key={item.id} href={item.path} onClick={() => toggle()} className="overflow-hidden text-2xl hover:text-blue-500 transition-all duration-300 ease-in-out">{item.title} </a>
+                    <div className="h-[1px] bg-slate-200 w-11/12 place-self-end"></div>
                 </>
             })}
-            <Link to='/links' onClick={() => toggle()} className="text-4xl hover:text-blue-500 transition-all duration-300 ease-in-out">Links</Link>
+            <Link to='/links' onClick={() => toggle()} className="text-2xl hover:text-blue-500 transition-all duration-300 ease-in-out">Links</Link>
+            <div className="h-[1px] bg-slate-200 w-11/12 place-self-end"></div>
         </div>}
 
     </>
