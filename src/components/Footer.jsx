@@ -3,7 +3,7 @@ import { faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons"
 import media from '../data/media'
 function Footer() {
     return <>
-        <div className="bg-black text-white font-sans w-full h-46 py-6 flex flex-col items-center gap-2 z-4">
+        <div className=" text-white bg-gray-950 border-t-[1px] border-slate-800 font-sans w-full h-46 py-6 flex flex-col items-center gap-2 z-4">
             <p>Copyright © 2023. All rights are reserved</p>
             <div className="flex flex-row justify-center md:justify-start gap-4">
                 {media.map((item) => {

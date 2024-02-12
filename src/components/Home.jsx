@@ -4,6 +4,7 @@ import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
 import { useState } from 'react'
+import ThemeContext from '../components/NavAndOutlet'
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -17,23 +18,23 @@ function Home() {
         setIsVisible(true);
     };
 
-    return <section id='home' className="w-full pt-20 bg-slate-50 flex flex-col items-center justify-center ">
+    return <section id='home' className=" w-full pt-20 bg-slate-50 dark:bg-slate-900 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-8 gap-10">
             <div className="flex flex-col-reverse lg:flex-row items-center md:justify-center gap-8">
                 <div className="flex flex-col items-center gap-6 py-10">
                     <div className="flex flex-col gap-2 ">
-                        <p className="text-4xl font-bold text-center md:text-6xl ">iamsuryasonar<span className="text-blue-600">.dev</span></p>
-                        <div className="flex flex-row items-center" >
-                            <div className={`mr-2 h-2 rounded-full bg-black growline-animation `} onAnimationEnd={onAnimationEnd} ></div>
-                            {isVisible ? <div className="w-3 h-3 rounded-full bg-blue-600"></div> : <div className="w-3 h-3"></div>}
+                        <p className="text-4xl font-bold text-center md:text-6xl dark:text-white ">iamsuryasonar<span className="text-green-500">.dev</span></p>
+                        <div className="flex flex-row items-center " >
+                            <div className={`mr-2 h-2 rounded-full  growline-animation bg-black dark:bg-white`} onAnimationEnd={onAnimationEnd} ></div>
+                            {isVisible ? <div className="w-3 h-3 rounded-full bg-green-500"></div> : <div className="w-3 h-3"></div>}
                         </div>
                     </div>
-                    <p className="text-center text-xl">{text.introduction}</p>
+                    <p className="text-center text-xl dark:text-white">{text.introduction}</p>
                     <div className="flex flex-row justify-center md:justify-start gap-4 text-3xl">
                         {media.map((item) => {
                             return (
                                 <a target='_blank' rel='noopener noreferrer' href={item.url} key={item.id} className=''>
-                                    <FontAwesomeIcon className='text-3xl hover:scale-150 transition-all duration-300 ease-in-out' icon={item.icon} />
+                                    <FontAwesomeIcon className='text-3xl hover:scale-150 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
                                 </a>
                             )
                         })}
@@ -47,10 +48,10 @@ function Home() {
             </div>
 
             <div className="my-4 max-w-7xl flex flex-col items-center md:flex-row md:justify-start  gap-6">
-                <div className="flex md:flex-row flex-col text-2xl">
+                <div className="flex md:flex-row flex-col text-2xl dark:text-white">
                     <p>Tech Stack </p>
-                    <span className="hidden md:grid px-1">|</span>
-                    <div className="w-full h-[1px] bg-slate-600 md:hidden"></div>
+                    <span className="hidden md:grid px-1 text-green-500">|</span>
+                    <div className="w-full h-[2px] md:hidden bg-green-500"></div>
                 </div>
                 <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-4">
                     {skills.map((item) => {

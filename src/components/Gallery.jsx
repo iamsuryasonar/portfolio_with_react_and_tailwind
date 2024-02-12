@@ -10,10 +10,13 @@ function Gallery() {
         setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
     };
 
-    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 ">
+    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 dark:bg-slate-950">
         <div className='max-w-3xl '>
             <div className="p-6 flex flex-col items-center">
-                <p className="py-4 place-self-start uppercase font-bold text-blue-600 text-2xl">Gallery</p>
+                <div className='place-self-start flex items-center gap-2'>
+                    <div className='w-8 h-[3px] bg-green-500'></div>
+                    <p className="py-4 place-self-start uppercase font-bold text-green-500 text-2xl">Gallery</p>
+                </div>
                 <div className='flex flex-col place-self-end'>
                     <p className="place-self-end text-xl font-medium text-slate-600">
                         <span className='text-2xl'>"</span>You don't take a photograph, you make it.<span className='text-2xl'>"</span>
