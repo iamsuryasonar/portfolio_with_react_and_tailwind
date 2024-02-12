@@ -40,7 +40,7 @@ function Nav() {
     ]
 
     return <>
-        <div className="font-sans h-20 fixed top-0 left-0 right-0 px-10 flex flex-row justify-between items-center shadow-md bg-white dark:bg-slate-950 z-10">
+        <div className="font-sans h-20 fixed top-0 left-0 right-0 px-6 flex flex-row justify-between items-center shadow-md bg-white dark:bg-slate-950 z-10">
             <Link to="/" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out dark:text-white">iamsuryasonar<span className="text-green-500">.dev</span></Link>
             <div className="flex justify-between items-center gap-6">
                 <div onClick={() => setTheme(!theme)} className="bg-gray-400 w-9 cursor-pointer rounded-full toggler dark:bg-green-500">
