@@ -14,7 +14,7 @@ function Project({ id, image, projectName, projectDescription, source_code, live
 
 
     return <div className="max-w-4xl mx-6 flex flex-col items-center gap-4">
-        <div className="flex flex-col items-center gap-4 p-4 bg-white dark:bg-slate-950 rounded-lg shadow-lg md:grid md:grid-cols-6 "  >
+        <div className="flex flex-col items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-lg shadow-lg md:grid md:grid-cols-6 "  >
             <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
                 <img className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
                     src={image}
@@ -33,9 +33,9 @@ function Project({ id, image, projectName, projectDescription, source_code, live
                     })}
                 </div>
                 <div className="w-full flex flex-row justify-around">
-                    <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black bg-slate-900 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                    <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                     {live_url === "" ? <span className="w-1"></span> :
-                        <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black bg-slate-900 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                        <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                     }
                 </div>
             </div>
@@ -45,8 +45,8 @@ function Project({ id, image, projectName, projectDescription, source_code, live
 
 function Projects() {
     return <>
-        <section id='projects' className=" py-24 min-h-svh w-full bg-slate-50 dark:bg-slate-900 flex flex-col items-center gap-16 ">
-          
+        <section id='projects' className=" py-24 min-h-svh w-full bg-slate-50 dark:bg-slate-950 flex flex-col items-center gap-16 ">
+
             <div className="max-w-4xl p-6 flex flex-col items-center">
                 <div className='place-self-start flex items-center gap-2'>
                     <div className='w-8 h-[3px] bg-green-500'></div>

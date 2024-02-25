@@ -4,8 +4,52 @@ import notebook from '../assets/projects/notebook.jpg'
 import portfolio from '../assets/projects/portfolio.jpg'
 import temp_message from '../assets/projects/temp_message.jpg'
 import weatherapp from '../assets/projects/weatherapp.jpg'
+import limostore from '../assets/projects/limostore.png'
 
 const projects = [
+    {
+        techs: [
+            {
+                id: 's3',
+                tech: "s3 ",
+            },
+            {
+                id: 'react',
+                tech: "react",
+            },
+            {
+                id: 'nodejs',
+                tech: "nodeJs",
+            },
+            {
+                id: 'express',
+                tech: "express",
+            },
+            {
+                id: 'MongoDb',
+                tech: "MongoDb",
+            },
+            {
+                id: 'tailwind',
+                tech: "tailwind",
+            },
+            {
+                id: 'redux',
+                tech: "reduxToolkit ",
+            },
+
+        ],
+        id: "LIMOSTORE",
+        image: limostore,
+        translate_y_percent: 'translate-y-[-35%]',
+        source_code: "https://github.com/iamsuryasonar/Apparel-store-limo.git",
+        build_info:
+            "Built with NodeJs,Express, MongoDb, React, Redux and Tailwind",
+        title: "LIMO STORE",
+        url: "https://limo-store.netlify.app",
+        description:
+            "A single-vendor clothing e-commerce platform with essential features such as user authentication, a robust add-to-cart system, and a seamless checkout process.",
+    },
     {
         techs: [
             {
@@ -19,6 +63,10 @@ const projects = [
             {
                 id: 'nodejs',
                 tech: "nodeJs",
+            },
+            {
+                id: 'expressjs',
+                tech: "expressJs",
             },
             {
                 id: 'MongoDb',
