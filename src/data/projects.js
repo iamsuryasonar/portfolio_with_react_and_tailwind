@@ -1,4 +1,4 @@
-import uniurl from '../assets/projects/uniurl.jpg'
+import uniurl from '../assets/projects/uniurl.png'
 import cryptorank from '../assets/projects/cryptorank.jpg'
 import notebook from '../assets/projects/notebook.jpg'
 import portfolio from '../assets/projects/portfolio.jpg'
@@ -135,7 +135,7 @@ const projects = [
         ],
         id: "portfolio",
         image: portfolio,
-        translate_y_percent: 'translate-y-[-73%]',
+        translate_y_percent: 'translate-y-[-82%]',
         source_code: "https://github.com/iamsuryasonar/portfolio_with_react_and_tailwind.git",
         build_info: "Built with Tailwind CSS, React.",
         title: "Portfolio",
