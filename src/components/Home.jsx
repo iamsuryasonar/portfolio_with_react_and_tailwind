@@ -4,7 +4,6 @@ import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
 import { useState } from 'react'
-import ThemeContext from '../components/NavAndOutlet'
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +24,7 @@ function Home() {
                     <div className="flex flex-col gap-2 ">
                         <p className="text-4xl font-bold text-center md:text-6xl dark:text-white ">iamsuryasonar<span className="text-green-500">.dev</span></p>
                         <div className="flex flex-row items-center " >
-                            <div className={`mr-2 h-2 rounded-full  growline-animation bg-black dark:bg-white`} onAnimationEnd={onAnimationEnd} ></div>
+                            <div className={`mr-2 h-2 rounded-full growline-animation bg-black dark:bg-white`} onAnimationEnd={onAnimationEnd} ></div>
                             {isVisible ? <div className="w-3 h-3 rounded-full bg-green-500"></div> : <div className="w-3 h-3"></div>}
                         </div>
                     </div>

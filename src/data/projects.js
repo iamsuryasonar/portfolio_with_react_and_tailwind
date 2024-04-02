@@ -88,32 +88,6 @@ const projects = [
         description:
             "UNIURL is a URL sharing platform, which enables users to share all of their URL's with a single URL. For example 'www.uniurl.com/username'.",
     },
-
-    {
-        id: "notebook",
-        techs: [
-            {
-                id: 'dart',
-                tech: "dart",
-            },
-            {
-                id: 'flutter',
-                tech: "flutter",
-            },
-            {
-                id: 'firebaseDb',
-                tech: "firebaseRTDb",
-            },
-        ],
-        image: notebook,
-        translate_y_percent: 'translate-y-[-48%]',
-        source_code: "https://github.com/iamsuryasonar/flutterNotes.git",
-        build_info: "Built with flutter, Dart and Firebase realtime database.",
-        title: "NoteBook",
-        url: "",
-        description:
-            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes.",
-    },
     {
         techs: [
             {
@@ -142,6 +116,31 @@ const projects = [
         url: "https://iamsuryasonar.netlify.app",
         description:
             "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences.",
+    },
+    {
+        id: "notebook",
+        techs: [
+            {
+                id: 'dart',
+                tech: "dart",
+            },
+            {
+                id: 'flutter',
+                tech: "flutter",
+            },
+            {
+                id: 'firebaseDb',
+                tech: "firebaseRTDb",
+            },
+        ],
+        image: notebook,
+        translate_y_percent: 'translate-y-[-48%]',
+        source_code: "https://github.com/iamsuryasonar/flutterNotes.git",
+        build_info: "Built with flutter, Dart and Firebase realtime database.",
+        title: "NoteBook",
+        url: "",
+        description:
+            "An android app to take important notes, I used firebase for authentication, authorisation and storage of user data and notes.",
     },
     {
         techs: [

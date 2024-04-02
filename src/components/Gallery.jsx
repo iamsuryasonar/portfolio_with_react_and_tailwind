@@ -10,8 +10,8 @@ function Gallery() {
         setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
     };
 
-    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 dark:bg-slate-900">
-        <div className='max-w-3xl '>
+    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 bg-slate-50 dark:bg-slate-950">
+        <div className='max-w-3xl'>
             <div className="p-6 flex flex-col items-center">
                 <div className='place-self-start flex items-center gap-2'>
                     <div className='w-8 h-[3px] bg-green-500'></div>
