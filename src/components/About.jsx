@@ -19,7 +19,7 @@ function About() {
                     <p className="uppercase font-bold text-2xl text-green-500">About Me</p>
                 </div>
                 <p className=" font-bold dark:text-white">{text.about_title}</p>
-                <p className="text-base text-slate-400 ">{text.about_me}</p>
+                <p className="text-base text-slate-500 dark:text-slate-400">{text.about_me}</p>
             </div>
         </div>
     </section>

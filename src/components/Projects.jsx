@@ -23,9 +23,9 @@ function Project({ id, image, projectName, projectDescription, source_code, live
                     onMouseLeave={() => setHover(false)}
                 ></img>
             </div>
-            <div className={`max-w-96 h-full p-8 col-span-3 flex flex-col justify-evenly items-center gap-6 ${reverse_grid ? 'md:order-1' : 'md:order-2 md:place-self-end'}`}>
+            <div className={`max-w-96 h-full p-0 md:p-6 col-span-3 flex flex-col justify-evenly items-center gap-6 ${reverse_grid ? 'md:order-1' : 'md:order-2 md:place-self-end'}`}>
                 <p className="uppercase font-bold text-xl dark:text-white" >{projectName}</p>
-                <p className="text-base text-slate-500  ">{projectDescription}</p>
+                <p className="text-base text-slate-500 m-1">{projectDescription}</p>
                 <div className="w-full grid-row">
                     {techs.map((item) => {
                         return <button tabIndex={-1} key={item.id} className='m-1 h-6 px-2 rounded-xl bg-green-500 text-white font-normal text-sm shadow-lg bg-'>{item.tech}</button>
@@ -33,8 +33,8 @@ function Project({ id, image, projectName, projectDescription, source_code, live
                 </div>
                 <div className="w-full flex flex-row justify-around">
                     <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
-                    {live_url === "" ? <span className="w-1"></span> :
-                        <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                    {
+                        live_url && <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                     }
                 </div>
             </div>
