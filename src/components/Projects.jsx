@@ -28,7 +28,7 @@ function Project({ id, image, projectName, projectDescription, source_code, live
                 <p className="text-base text-slate-500  ">{projectDescription}</p>
                 <div className="w-full grid-row">
                     {techs.map((item) => {
-                        return <button key={item.id} className='m-1 h-6 px-2 rounded-xl bg-green-500 text-white font-normal text-sm shadow-lg bg-'>{item.tech}</button>
+                        return <button tabIndex={-1} key={item.id} className='m-1 h-6 px-2 rounded-xl bg-green-500 text-white font-normal text-sm shadow-lg bg-'>{item.tech}</button>
                     })}
                 </div>
                 <div className="w-full flex flex-row justify-around">
