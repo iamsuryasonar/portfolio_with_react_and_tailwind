@@ -9,7 +9,7 @@ import navItems from '../data/navItems'
 
 function Nav() {
 
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
     const { theme, setToggleTheme } = useContext(ThemeContext);
     const ref = useRef(null)
     const scrollPercentage = useScrollIndicator();
