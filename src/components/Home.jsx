@@ -1,12 +1,24 @@
+import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import text from '../data/text'
 import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
-import { useState } from 'react'
+
+function Skill(props) {
+    const { skill, loadedImages, handleImageLoad } = props;
+
+    return <div
+        key={skill.id}
+        className={`w-10 h-10 text-2xl rounded-full ${loadedImages.includes(skill.id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `} >
+        <img src={skill.image} className={`object-cover rounded-sm aspect-square ${loadedImages.includes(skill.id) ? ' block' : ' hidden'}`} onLoad={() => handleImageLoad(skill.id)} />
+    </div>
+}
+
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
+
     const [loadedImages, setLoadedImages] = useState([]);
 
     const handleImageLoad = (index) => {
@@ -33,7 +45,7 @@ function Home() {
                         {media.map((item) => {
                             return (
                                 <a target='_blank' rel='noopener noreferrer' href={item.url} key={item.id} className=''>
-                                    <FontAwesomeIcon className='text-3xl hover:scale-150 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
+                                    <FontAwesomeIcon className='text-3xl hover:scale-125 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
                                 </a>
                             )
                         })}
@@ -51,10 +63,8 @@ function Home() {
                     <p className="border-b-2 border-r-0 md:border-b-0 md:border-r-2 border-green-500 md:px-4">Tech Stack </p>
                 </div>
                 <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-4">
-                    {skills.map((item) => {
-                        return <div key={item.id} className={`w-10 h-10 text-2xl rounded-full hover:scale-150 transition-all duration-300 ease-in-out ${loadedImages.includes(item.id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `} >
-                            <img src={item.image} className={`object-cover rounded-sm aspect-square ${loadedImages.includes(item.id) ? ' block' : ' hidden'}`} onLoad={() => handleImageLoad(item.id)} />
-                        </div>
+                    {skills.map((item, index) => {
+                        return <Skill key={item.id} skill={item} loadedImages={loadedImages} handleImageLoad={handleImageLoad} />
                     })}
                 </div>
             </div>

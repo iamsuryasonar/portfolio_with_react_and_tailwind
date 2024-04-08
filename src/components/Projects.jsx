@@ -1,18 +1,35 @@
+import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLaptopCode, faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import projects from "../data/projects";
 import text from '../data/text'
-import { useState } from 'react'
+import useOnScreen from '../hooks/useOnScreen'
 
-function Project({ id, image, projectName, projectDescription, source_code, live_url, techs, translate_y_percent, reverse_grid }) {
+function Project(props) {
+    const {
+        id,
+        image,
+        projectName,
+        projectDescription,
+        source_code,
+        live_url,
+        techs,
+        translate_y_percent,
+        reverse_grid
+    } = props;
+
     const [isHover, setHover] = useState(false);
     const [loadedImages, setLoadedImages] = useState([]);
+    const [ref, isVisible] = useOnScreen({ threshold: 0 });
 
     const handleImageLoad = (index) => {
         setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
     };
 
-    return <div className="max-w-4xl mx-6 flex flex-col gap-4">
+    return <div ref={ref} style={{
+        transform: isVisible ? 'translateY(0%)' : '',
+        opacity: isVisible ? '1' : '',
+    }} className="max-w-4xl translate-y-[50px] opacity-0 mx-6 flex flex-col gap-4 transition-all duration-700 ease-in-out">
         <div className="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900 rounded-lg shadow-lg md:grid md:grid-cols-6 "  >
             <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
                 <img className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
@@ -32,9 +49,9 @@ function Project({ id, image, projectName, projectDescription, source_code, live
                     })}
                 </div>
                 <div className="w-full flex flex-row justify-around">
-                    <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                    <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black  dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                     {
-                        live_url && <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black bg-slate-950 text-white px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                        live_url && <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                     }
                 </div>
             </div>
