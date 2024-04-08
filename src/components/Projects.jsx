@@ -49,9 +49,9 @@ function Project(props) {
                     })}
                 </div>
                 <div className="w-full flex flex-row justify-around">
-                    <a href={source_code} className='hover:dark:bg-slate-300 hover:dark:text-black  dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                    <a href={source_code} className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                     {
-                        live_url && <a href={live_url} className='  hover:dark:bg-slate-300 hover:dark:text-black dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md hover:text-green-200 flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                        live_url && <a href={live_url} className='  hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                     }
                 </div>
             </div>

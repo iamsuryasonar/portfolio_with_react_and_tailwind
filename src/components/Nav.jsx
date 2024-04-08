@@ -1,16 +1,16 @@
+import React, { useState, useRef, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState, useRef, useContext, Fragment } from 'react'
-import { Link } from 'react-router-dom'
-import { ThemeContext } from '../App'
+import { ThemeContext } from '../contexts/ThemeProvider'
 import useScrollIndicator from '../hooks/useScrollIndicator'
 import useOnOutsideClick from '../hooks/useOnOutsideClick'
 import navItems from '../data/navItems'
 
 function Nav() {
 
-    const [menu, setMenu] = useState(false);
-    const { theme, setTheme } = useContext(ThemeContext);
+    const [menu, setMenu] = useState(true);
+    const { theme, setToggleTheme } = useContext(ThemeContext);
     const ref = useRef(null)
     const scrollPercentage = useScrollIndicator();
     useOnOutsideClick(ref, () => { setMenu(false) })
@@ -27,10 +27,10 @@ function Nav() {
                     tabIndex={0}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
-                            setTheme(!theme)
+                            setToggleTheme()
                         }
                     }}
-                    onClick={() => setTheme(!theme)}
+                    onClick={() => setToggleTheme()}
                     className="bg-gray-400 w-9 cursor-pointer rounded-full toggler dark:bg-green-500">
                     <div className={`bg-white w-5 h-5 scale-75 rounded-full transition-transform dark:bg-white ${theme ? 'translate-x-4' : ''}`}></div>
                 </div>
@@ -54,6 +54,7 @@ function Nav() {
         <div className="z-20 h-[1px] bg-slate-100  dark:bg-slate-900 w-full">
             <div style={{ width: scrollPercentage + "%" }} className="h-[1px] bg-green-400"></div>
         </div>
+        {/* menu */}
         <div
             style={{
                 transform: menu ? 'translateX(0%)' : 'translateX(100%)',
@@ -70,15 +71,24 @@ function Nav() {
                         toggle()
                     }
                 }} />
-            <div className="z-20 h-[1px] bg-slate-200 dark:bg-slate-800 w-9/12 place-self-end"></div>
             {navItems.map((item) => {
-                return <Fragment key={item.id} >
-                    <a href={item.path} onClick={() => toggle()} className="z-20 self-end px-10 overflow-hidden text-2xl hover:text-green-500 transition-all duration-300 ease-in-out dark:text-white">{item.title} </a>
-                    <div className="z-20 h-[1px] bg-slate-200 dark:bg-slate-800 w-9/12 place-self-end"></div>
-                </Fragment>
+                return <div
+                    key={item.id}
+                    style={{
+                        transform: menu ? 'translateX(0%)' : 'translateX(100%)',
+                    }}
+                    className="w-full z-20 px-10 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out">
+                    <a href={item.path} onClick={() => toggle()} className="overflow-hidden text-2xl hover:text-green-500 transition-all duration-300 ease-in-out dark:text-white">{item.title} </a>
+                    <div className="h-[1px] bg-slate-200 dark:bg-slate-800 w-11/12"></div>
+                </div>
             })}
-            <Link to='/links' onClick={() => toggle()} className="z-20 self-end px-10 text-2xl hover:text-green-500 dark:text-white transition-all duration-300 ease-in-out">Links</Link>
-            <div className="z-20 h-[1px] bg-slate-200 dark:bg-slate-800 w-9/12 place-self-end"></div>
+            <Link
+                style={{
+                    transform: menu ? 'translateX(0%)' : 'translateX(100%)',
+                }}
+                to='/links'
+                onClick={() => toggle()}
+                className="z-20 self-end px-10 text-2xl hover:text-green-500 dark:text-white transition-all delay-300 duration-700 ease-in-out">Links</Link>
         </div>
     </div>
 }
