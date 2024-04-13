@@ -21,7 +21,7 @@ function Nav() {
         setMenu(!menu);
     };
 
-    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-slate-50 dark:bg-slate-950 font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-[100%]'}`}>
+    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-slate-50 dark:bg-slate-950 font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
         <div className="h-full px-6 flex flex-row justify-between items-center">
             <Link to="/" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out dark:text-white">iamsuryasonar<span className="text-green-500">.dev</span></Link>
             <div className="flex justify-between items-center gap-6">
