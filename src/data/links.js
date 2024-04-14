@@ -12,7 +12,7 @@ const links = [
     {
         id: "resume",
         title: "My Resume - updated on 26-Feb-2024",
-        url: "https://drive.google.com/file/d/1-TnWfNyaCNMsvqccNjKC3j0dTMap0yDm/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1XZVaZi-ND8bkvcTTylQAFBVpT3c50_g6/view?usp=sharing",
     },
 ]
 
