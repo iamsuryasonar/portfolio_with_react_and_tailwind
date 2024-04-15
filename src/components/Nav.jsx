@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react'
+import React, { useEffect, useState, useRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,7 @@ import useScrollDirection from '../hooks/useScrollDirection';
 function Nav() {
 
     const [menu, setMenu] = useState(false);
+    const [activeMenu, setActiveMenu] = useState('');
     const { theme, setToggleTheme } = useContext(ThemeContext);
     const ref = useRef(null)
     const scrollPercentage = useScrollIndicator();
