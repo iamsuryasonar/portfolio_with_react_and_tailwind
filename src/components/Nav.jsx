@@ -11,7 +11,6 @@ import useScrollDirection from '../hooks/useScrollDirection';
 function Nav() {
 
     const [menu, setMenu] = useState(false);
-    const [activeMenu, setActiveMenu] = useState('');
     const { theme, setToggleTheme } = useContext(ThemeContext);
     const ref = useRef(null)
     const scrollPercentage = useScrollIndicator();
@@ -63,7 +62,7 @@ function Nav() {
                 transform: menu ? 'translateX(0%)' : 'translateX(100%)',
             }}
             ref={ref}
-            className='bg-white dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'>
+            className='bg-white px-10  dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'>
             <p className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
             <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white"
                 icon={faXmark}
@@ -80,9 +79,8 @@ function Nav() {
                     style={{
                         transform: menu ? 'translateX(0%)' : 'translateX(100%)',
                     }}
-                    className="w-full z-20 px-10 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out">
+                    className="w-full z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out">
                     <a href={item.path} onClick={() => toggle()} className="overflow-hidden text-2xl hover:text-green-500 transition-all duration-300 ease-in-out dark:text-white">{item.title} </a>
-                    <div className="h-[1px] bg-slate-200 dark:bg-slate-800 w-11/12"></div>
                 </div>
             })}
             <Link
@@ -91,7 +89,7 @@ function Nav() {
                 }}
                 to='/links'
                 onClick={() => toggle()}
-                className="z-20 self-end px-10 text-2xl hover:text-green-500 dark:text-white transition-all delay-300 duration-700 ease-in-out">Links</Link>
+                className="z-20 self-end text-2xl hover:text-green-500 dark:text-white transition-all delay-300 duration-700 ease-in-out">Links</Link>
         </div>
     </div>
 }
