@@ -34,7 +34,7 @@ function Hero() {
             <div className="flex flex-col-reverse lg:flex-row items-center md:justify-center gap-6 lg:gap-16">
                 <div className="flex flex-col items-center gap-6">
                     <div className="flex flex-col gap-2 ">
-                        <p className="text-4xl font-bold text-center md:text-5xl lg:text-6xl dark:text-white ">iamsuryasonar<span className="text-green-500">.dev</span></p>
+                        <p className="text-4xl font-bold text-center md:text-5xl lg:text-6xl dark:text-white ">Hi, I am <span className="text-green-500">Surya Sonar</span></p>
                         <div className="flex flex-row items-center " >
                             <div className={`mr-2 h-2 rounded-full growline-animation bg-black dark:bg-white`} onAnimationEnd={onAnimationEnd} ></div>
                             {isVisible ? <div className="w-3 h-3 rounded-full bg-green-500"></div> : <div className="w-3 h-3"></div>}
