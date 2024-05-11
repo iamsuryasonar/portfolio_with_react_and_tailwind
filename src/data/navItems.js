@@ -4,11 +4,11 @@ const navItems = [
         title: 'Blog',
         path: 'https://websnippet.vercel.app/'
     },
-    {
-        id: 2,
-        title: 'About',
-        path: '/#about'
-    },
+    // {
+    //     id: 2,
+    //     title: 'About',
+    //     path: '/#about'
+    // },
     {
         id: 3,
         title: 'Projects',

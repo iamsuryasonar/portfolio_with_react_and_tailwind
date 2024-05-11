@@ -26,7 +26,7 @@ function Certificate({ certificate }) {
             <img className={`object-cover rounded-xl ${loadedImages.includes(certificate.id) ? 'block' : ' hidden'}`} src={certificate.image} onLoad={() => handleImageLoad(certificate.id)}></img>
         </div>
         <div className="flex flex-col items-start gap-4 col-start-4 col-span-4">
-            <p onClick={() => redirectToCertification(certificate.url)} className=" font-bold dark:text-white cursor-pointer">{certificate.title}</p>
+            <p onClick={() => redirectToCertification(certificate.url)} className="hover:text-green-500 font-bold dark:text-white cursor-pointer duration-500 transition-all ease-in-out">{certificate.title}</p>
             <p className="text-base text-slate-500 ">{certificate.description}</p>
         </div>
     </div>

@@ -23,7 +23,7 @@ function Nav() {
 
     return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-slate-50 dark:bg-slate-950 font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
         <div className="h-full px-6 flex flex-row justify-between items-center">
-            <Link to="/" className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out dark:text-white">iamsuryasonar<span className="text-green-500">.dev</span></Link>
+            <a href="/#home" className="text-xl font-bold hover:text-green-300 transition-all duration-300 ease-in-out dark:text-white">iamsuryasonar<span className="text-green-500">.dev</span></a>
             <div className="flex justify-between items-center gap-6">
                 <div
                     tabIndex={0}
@@ -42,7 +42,7 @@ function Nav() {
                     })}
                     <Link to='/links' className="text-base hover:text-green-500  dark:text-white hover:underline underline-offset-4 ">Links</Link>
                 </div>
-                <FontAwesomeIcon className="text-2xl outline-none md:hidden hover:scale-125 transition-all duration-300 ease-in-out dark:text-white"
+                <FontAwesomeIcon className="text-2xl outline-none md:hidden hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
                     icon={faBars}
                     onClick={() => toggle()}
                     tabIndex={0}
@@ -62,9 +62,10 @@ function Nav() {
                 transform: menu ? 'translateX(0%)' : 'translateX(100%)',
             }}
             ref={ref}
-            className='bg-white px-10  dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'>
+            className='bg-white px-6  dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'
+        >
             <p className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
-            <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white"
+            <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
                 icon={faXmark}
                 onClick={() => toggle()}
                 tabIndex={0}
@@ -73,23 +74,28 @@ function Nav() {
                         toggle()
                     }
                 }} />
-            {navItems.map((item) => {
-                return <div
-                    key={item.id}
-                    style={{
-                        transform: menu ? 'translateX(0%)' : 'translateX(100%)',
-                    }}
-                    className="w-full z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out">
-                    <a href={item.path} onClick={() => toggle()} className="overflow-hidden text-2xl hover:text-green-500 transition-all duration-300 ease-in-out dark:text-white">{item.title} </a>
-                </div>
-            })}
-            <Link
+            <div
+                className='w-full text-2xl border-r-[2px] border-green-500 border-opacity-75 pr-4 z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
                 style={{
                     transform: menu ? 'translateX(0%)' : 'translateX(100%)',
-                }}
-                to='/links'
-                onClick={() => toggle()}
-                className="z-20 self-end text-2xl hover:text-green-500 dark:text-white transition-all delay-300 duration-700 ease-in-out">Links</Link>
+                }}>
+                {navItems.map((item) => {
+                    return <React.Fragment key={item.id}>
+                        <a
+                            href={item.path}
+                            onClick={() => toggle()}
+                            className="overflow-hidden dark:text-white hover:text-green-500 transition-all duration-300 ease-in-out ">
+                            {item.title}
+                        </a>
+                    </React.Fragment>
+                })}
+                <Link
+                    to='/links'
+                    onClick={() => toggle()}
+                    className="z-20 self-end dark:text-white hover:text-green-500 transition-all duration-300 ease-in-out">
+                    Links
+                </Link>
+            </div>
         </div>
     </div>
 }

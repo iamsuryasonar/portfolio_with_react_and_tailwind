@@ -29,7 +29,7 @@ function Hero() {
         setIsVisible(true);
     };
 
-    return <section id='hero' className="min-h-svh w-full pt-20 bg-slate-50 dark:bg-slate-950 flex flex-col items-center justify-center ">
+    return <section id='home' className="min-h-svh w-full pt-20 bg-slate-50 dark:bg-slate-950 flex flex-col items-center justify-center ">
         <div className="max-w-4xl flex flex-col mx-6 my-20 gap-6 lg:gap-12">
             <div className="flex flex-col-reverse lg:flex-row items-center md:justify-center gap-6 lg:gap-16">
                 <div className="flex flex-col items-center gap-6">

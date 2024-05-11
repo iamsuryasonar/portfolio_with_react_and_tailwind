@@ -33,7 +33,6 @@ function Image({ image, index }) {
 
 function Gallery() {
 
-
     return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 bg-slate-50 dark:bg-slate-950">
         <div className='max-w-3xl'>
             <div className="p-6 flex flex-col items-center">
