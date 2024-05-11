@@ -75,7 +75,7 @@ function Nav() {
                     }
                 }} />
             <div
-                className='w-full text-2xl border-r-[2px] border-green-500 border-opacity-75 pr-4 z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
+                className='w-full text-3xl font-extrabold font-sans border-r-[2px] border-green-500 border-opacity-75 pr-4 z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
                 style={{
                     transform: menu ? 'translateX(0%)' : 'translateX(100%)',
                 }}>

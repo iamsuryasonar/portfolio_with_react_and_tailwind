@@ -79,12 +79,12 @@ function MiniProjects({ project }) {
                 opacity: isVisible ? '1' : '',
             }}
             className="w-full h-full translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out">
-            <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] dark:border-white dark:text-white font-light text-sm'>
+            <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] dark:border-slate-600 border-slate-400 dark:text-white font-light text-sm'>
                 <span className='flex items-center gap-2'>
-                    <FontAwesomeIcon icon={faBook} className='text-white' />
+                    <FontAwesomeIcon icon={faBook} className='' />
                     <a href={project.source_code} target='_blank' className='text-green-500 hover:underline'>{project.title}</a>
                 </span>
-                <p className='text-white'>{project.description}</p>
+                <p className=''>{project.description}</p>
                 <div className='flex items-center flex-wrap gap-4'>
                     <div className='flex flex-wrap gap-4'>
                         {
@@ -100,7 +100,7 @@ function MiniProjects({ project }) {
                         }
                     </div>
                     <a href={project.source_code} target='_blank'>
-                        <FontAwesomeIcon icon={faCodeFork} className='text-white' />
+                        <FontAwesomeIcon icon={faCodeFork} className='' />
                     </a>
                 </div>
             </div>
