@@ -81,7 +81,7 @@ const projects = [
         id: "UNIURL",
         image: uniurl,
         translate_y_percent: 'translate-y-[-50%]',
-        source_code: "https://github.com/iamsuryasonar/URLshare.git",
+        source_code: "https://github.com/iamsuryasonar/urlshare-react.git",
         build_info:
             "Built with NodeJs, MongoDb, React, Redux and CSS",
         title: "UNIURL",
