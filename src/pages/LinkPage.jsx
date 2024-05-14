@@ -18,18 +18,15 @@ function LinkPage() {
                 </div >
                 {links.map((link) => {
                     return (
-                        <div key={link.id} className='w-11/12 hover:scale-105 p-10 bg-slate-200 dark:bg-slate-950 dark:border-slate-800  border-slate-900 border-[1px] flex justify-center items-center transition-all duration-300 ease-in-out'>
-                            <a target='_blank'
-                                rel='noopener noreferrer'
-                                href={link.url}
-                                className='text-black dark:text-white text-xl'
-                                key={link.id}
-                            >
-                                <p className=''>
-                                    {link.title}
-                                </p>
-                            </a>
-                        </div >
+                        <a key={link.id} target='_blank'
+                            rel='noopener noreferrer'
+                            href={link.url}
+                            className='w-11/12 hover:scale-105 p-10 bg-slate-200 dark:bg-slate-950 dark:border-slate-800  border-slate-900 border-[1px] flex justify-center items-center transition-all duration-300 ease-in-out'
+                        >
+                            <p className='text-black dark:text-white text-xl'>
+                                {link.title}
+                            </p>
+                        </a>
                     )
                 })}
 
