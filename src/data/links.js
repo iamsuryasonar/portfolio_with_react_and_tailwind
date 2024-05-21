@@ -2,7 +2,7 @@ const links = [
     {
         id: "resume",
         title: "My Resume - updated on 15-Apr-2024",
-        url: "https://drive.google.com/file/d/1zbPZM7FUpS9CG1-_T6Qw3zLdwWQ6E-m4/view?usp=sharing",
+        url: "https://drive.google.com/file/d/15WJRYxsv-p-XaCNO4MhVWghDwfhJArLn/view?usp=drive_link",
     },
     {
         id: "LIMOSTORE",
