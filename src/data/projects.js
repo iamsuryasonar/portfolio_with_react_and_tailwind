@@ -197,6 +197,36 @@ const projects = [
 
 const miniProjects = [
     {
+        id: "Group Chat",
+        techs: [
+            {
+                id: 'tailwindcss',
+                tech: "tailwind CSS",
+            },
+            {
+                id: 'react',
+                tech: "react",
+            },
+            {
+                id: 'Socket io',
+                tech: "Socket IO",
+            },
+            {
+                id: 'NodeJs',
+                tech: "NodeJs",
+            },
+            {
+                id: 'ExpressJs',
+                tech: "ExpressJs",
+            },
+        ],
+        source_code: "https://github.com/iamsuryasonar/group_chat_app.git",
+        title: "Group chat",
+        url: "",
+        description:
+            "Single chat room - group chat application.",
+    },
+    {
         id: "weatherapp",
         techs: [
             {
@@ -221,35 +251,6 @@ const miniProjects = [
         url: "",
         description:
             "Weather app, using the open weather REST API.",
-    },
-    {
-        id: "cryptorank",
-        techs: [
-            {
-                id: 'java',
-                tech: "java",
-            },
-            {
-                id: 'android',
-                tech: "android",
-            },
-            {
-                id: 'volleyLibrary',
-                tech: "volleyLibrary",
-            },
-            {
-                id: 'coinCapAPI',
-                tech: "coinCapAPI",
-            },
-        ],
-        image: cryptorank,
-        translate_y_percent: 'translate-y-[-38%]',
-        source_code: "https://github.com/iamsuryasonar/CryptoRank.git",
-        build_info: "Built with Java, XML, Volley library and Coincap Api.",
-        title: "CryptoRank",
-        url: "",
-        description:
-            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API.",
     },
     {
         id: "news24x7",
@@ -316,6 +317,35 @@ const miniProjects = [
         url: "",
         description:
             "To-do list application built with Vanilla JavaScript, with the power of HTML localStorage.",
+    },
+    {
+        id: "cryptorank",
+        techs: [
+            {
+                id: 'java',
+                tech: "java",
+            },
+            {
+                id: 'android',
+                tech: "android",
+            },
+            {
+                id: 'volleyLibrary',
+                tech: "volleyLibrary",
+            },
+            {
+                id: 'coinCapAPI',
+                tech: "coinCapAPI",
+            },
+        ],
+        image: cryptorank,
+        translate_y_percent: 'translate-y-[-38%]',
+        source_code: "https://github.com/iamsuryasonar/CryptoRank.git",
+        build_info: "Built with Java, XML, Volley library and Coincap Api.",
+        title: "CryptoRank",
+        url: "",
+        description:
+            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API.",
     },
 ]
 
