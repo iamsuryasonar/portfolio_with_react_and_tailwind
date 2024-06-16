@@ -22,7 +22,7 @@ function Certificate({ certificate }) {
             opacity: isVisible ? '1' : '',
         }}
         className='flex flex-col gap-4 translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out md:grid md:grid-cols-7 md:gap-12'>
-        <div onClick={() => redirectToCertification(certificate.url)} className={`col-start-1 col-span-3  rounded-xl  cursor-pointer ${loadedImages.includes(certificate.id) ? 'animate-none bg-slate-100' : 'bg-slate-100 animate-pulse'} `}>
+        <div onClick={() => redirectToCertification(certificate.url)} className={`col-start-1 col-span-3 hover:shadow-md hover:scale-105 transition-all duration-300 rounded-xl cursor-pointer ${loadedImages.includes(certificate.id) ? 'animate-none bg-slate-100' : 'bg-slate-100 animate-pulse'} `}>
             <img className={`object-cover rounded-xl ${loadedImages.includes(certificate.id) ? 'block' : ' hidden'}`} src={certificate.image} onLoad={() => handleImageLoad(certificate.id)}></img>
         </div>
         <div className="flex flex-col items-start gap-4 col-start-4 col-span-4">

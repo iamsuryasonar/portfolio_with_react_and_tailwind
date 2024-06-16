@@ -17,7 +17,7 @@ function Image({ image, index }) {
             transform: isVisible ? 'translateY(0%)' : '',
             opacity: isVisible ? '1' : '',
         }}
-        className='w-full h-full mb-4 relative grid rounded-lg translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out'
+        className='w-full h-full mb-4 relative grid rounded-lg translate-y-[50px] opacity-0 transition-all duration-500 ease-in-out'
         key={image.id}>
         <div className={`${loadedImages.includes(index) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
             <img src={image.image} loading='lazy' onLoad={() => handleImageLoad(index)}></img>

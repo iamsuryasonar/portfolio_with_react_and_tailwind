@@ -42,7 +42,7 @@ const projects = [
         ],
         id: "LIMOSTORE",
         image: limostore,
-        translate_y_percent: 'translate-y-[-35%]',
+        translate_y_percent: 'translate-y-[-66%]',
         source_code: "https://github.com/iamsuryasonar/Apparel-store-limo.git",
         build_info:
             "Built with NodeJs,Express, MongoDb, React, Redux and Tailwind",
@@ -80,7 +80,7 @@ const projects = [
         ],
         id: "UNIURL",
         image: uniurl,
-        translate_y_percent: 'translate-y-[-50%]',
+        translate_y_percent: 'translate-y-[-67%]',
         source_code: "https://github.com/iamsuryasonar/urlshare-react.git",
         build_info:
             "Built with NodeJs, MongoDb, React, Redux and CSS",
