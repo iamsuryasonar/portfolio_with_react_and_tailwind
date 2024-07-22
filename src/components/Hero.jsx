@@ -41,14 +41,17 @@ function Hero() {
                         </div>
                     </div>
                     <p className="text-center text-xl text-slate-500 dark:text-slate-400">{text.introduction}</p>
-                    <div className="flex flex-row justify-center md:justify-start gap-4 text-3xl">
-                        {media.map((item) => {
-                            return (
-                                <a target='_blank' rel='noopener noreferrer' href={item.url} key={item.id} className=''>
-                                    <FontAwesomeIcon className='text-3xl hover:scale-125 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
-                                </a>
-                            )
-                        })}
+                    <div className="flex flex-col sm:flex sm:flex-row justify-center md:justify-start gap-2 sm:gap-4">
+                        <div className="flex flex-row justify-center md:justify-start gap-4 ">
+                            {media.map((item) => {
+                                return (
+                                    <a target='_blank' rel='noopener noreferrer' className='text-3xl' href={item.url} key={item.id}>
+                                        <FontAwesomeIcon className='text-3xl hover:scale-125 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
+                                    </a>
+                                )
+                            })}
+                        </div>
+                        <a className='bg-black text-white dark:bg-white dark:text-black hover:bg-green-500 hover:text-white cursor-pointer transition-colors duration-300 ease-in-out rounded-full px-4  font-medium text-2xl flex justify-center items-center'><span>Resume</span></a>
                     </div>
                 </div>
                 <div className="w-64 h-64">

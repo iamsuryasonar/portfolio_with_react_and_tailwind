@@ -72,13 +72,13 @@ function MiniProjects({ project }) {
 
 
     return (
-        <li
+        <div
             ref={ref}
             style={{
                 transform: isVisible ? 'translateY(0%)' : '',
                 opacity: isVisible ? '1' : '',
             }}
-            className="w-full h-full translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out">
+            className="w-full h-full translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out ">
             <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] dark:border-slate-600 border-slate-400 dark:text-white font-light text-sm'>
                 <span className='flex items-center gap-2'>
                     <FontAwesomeIcon icon={faBook} className='' />
@@ -104,7 +104,7 @@ function MiniProjects({ project }) {
                     </a>
                 </div>
             </div>
-        </li>
+        </div>
     )
 }
 
