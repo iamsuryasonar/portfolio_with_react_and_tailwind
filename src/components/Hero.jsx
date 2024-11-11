@@ -5,6 +5,8 @@ import profilePicture from '../assets/dp.jpg'
 import skills from "../data/skills"
 import media from '../data/media'
 
+const RESUME_URL = "https://drive.google.com/file/d/1I4o1SP021PdUNHdMzjcD3ol6jW-v-eAT/view?usp=drive_link"
+
 function Skill(props) {
     const { skill, loadedImages, handleImageLoad } = props;
 
@@ -52,7 +54,7 @@ function Hero() {
                             })}
                         </div>
                         <a className='bg-black text-white dark:bg-white dark:text-black hover:bg-green-500 hover:text-white cursor-pointer transition-colors duration-300 ease-in-out rounded-full px-4 font-medium text-2xl flex justify-center items-center'
-                            href='https://drive.google.com/file/d/1mFB83jaQFxjH05FrsYz7XVO9w73ShDpe/view?usp=sharing'
+                            href={RESUME_URL}
                             target='_blank'
                             rel='noopener noreferrer'
                         >
