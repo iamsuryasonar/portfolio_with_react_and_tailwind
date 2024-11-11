@@ -4,6 +4,7 @@ import { faBook, faCodeFork, faLaptopCode, faRightToBracket } from "@fortawesome
 import { miniProjects, projects } from "../data/projects";
 import text from '../data/text'
 import useOnScreen from '../hooks/useOnScreen'
+import { faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 function Project(props) {
     const {
@@ -53,9 +54,9 @@ function Project(props) {
                         })}
                     </div>
                     <div className="w-full flex flex-row justify-around">
-                        <a href={source_code} className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                        <a href={source_code} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                         {
-                            live_url && <a href={live_url} className='  hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                            live_url && <a href={live_url} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                         }
                     </div>
                 </div>
@@ -99,8 +100,8 @@ function MiniProjects({ project }) {
                             })
                         }
                     </div>
-                    <a href={project.source_code} target='_blank'>
-                        <FontAwesomeIcon icon={faCodeFork} className='' />
+                    <a href={project.source_code} target='_blank' className='group w-6 h-6 flex justify-center items-center border rounded-full border-slate-400 hover:border-green-600'>
+                        <FontAwesomeIcon icon={faGithub} className='group-hover:text-green-600' />
                     </a>
                 </div>
             </div>

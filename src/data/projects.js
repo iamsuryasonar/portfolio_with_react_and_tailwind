@@ -6,6 +6,7 @@ import temp_message from '../assets/projects/temp_message.jpg'
 import weatherapp from '../assets/projects/weatherapp.jpg'
 import limostore from '../assets/projects/limostore.png'
 import websnippets from '../assets/projects/websnippets.png'
+import passwordVault from '../assets/projects/password_vault.png'
 
 const projects = [
     {
@@ -42,7 +43,7 @@ const projects = [
         ],
         id: "LIMOSTORE",
         image: limostore,
-        translate_y_percent: 'translate-y-[-66%]',
+        translate_y_percent: 'translate-y-[-64%]',
         source_code: "https://github.com/iamsuryasonar/Apparel-store-limo.git",
         build_info:
             "Built with NodeJs,Express, MongoDb, React, Redux and Tailwind",
@@ -54,8 +55,46 @@ const projects = [
     {
         techs: [
             {
-                id: 'css',
-                tech: "CSS",
+                id: 'tailwind',
+                tech: "tailwind",
+            },
+            {
+                id: 'react',
+                tech: "react",
+            },
+            {
+                id: 'nodejs',
+                tech: "nodeJs",
+            },
+            {
+                id: 'expressjs',
+                tech: "expressJs",
+            },
+            {
+                id: 'mongoDb',
+                tech: "mongo db",
+            },
+            {
+                id: 'zustand',
+                tech: "zustand ",
+            },
+        ],
+        id: "PASSWORDMAN",
+        image: passwordVault,
+        translate_y_percent: 'translate-y-[0%]',
+        source_code: "https://github.com/iamsuryasonar/passwordman.git",
+        build_info:
+            "Built with NodeJs, MongoDb, React, Zustand and tailwind css",
+        title: "PASSWORDvault",
+        url: "https://passwordvault.netlify.app/",
+        description:
+            "PASSWORDvault is A secure and user-friendly password manager built with React, Node.js, Express and MongoDB. This application helps users store and manage their passwords safely by encrypting sensitive data using AES encryption.",
+    },
+    {
+        techs: [
+            {
+                id: 'tailwind',
+                tech: "tailwind",
             },
             {
                 id: 'react',
@@ -71,7 +110,7 @@ const projects = [
             },
             {
                 id: 'MongoDb',
-                tech: "MongoDb",
+                tech: "mongoDb",
             },
             {
                 id: 'redux',
@@ -104,7 +143,7 @@ const projects = [
                 tech: "nodeJs",
             },
             {
-                id: 'css',
+                id: 'tailwind',
                 tech: "tailwindCSS",
             },
         ],
@@ -209,15 +248,15 @@ const miniProjects = [
             },
             {
                 id: 'Socket io',
-                tech: "Socket IO",
+                tech: "socket IO",
             },
             {
                 id: 'NodeJs',
-                tech: "NodeJs",
+                tech: "node js",
             },
             {
                 id: 'ExpressJs',
-                tech: "ExpressJs",
+                tech: "express js",
             },
         ],
         source_code: "https://github.com/iamsuryasonar/group_chat_app.git",
@@ -301,11 +340,11 @@ const miniProjects = [
         techs: [
             {
                 id: 'html',
-                tech: "HTML",
+                tech: "html",
             },
             {
                 id: 'css',
-                tech: "CSS",
+                tech: "css",
             },
             {
                 id: 'js',
@@ -331,7 +370,7 @@ const miniProjects = [
             },
             {
                 id: 'volleyLibrary',
-                tech: "volleyLibrary",
+                tech: "volley library",
             },
             {
                 id: 'coinCapAPI',
