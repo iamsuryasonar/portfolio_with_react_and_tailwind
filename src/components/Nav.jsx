@@ -62,7 +62,7 @@ function Nav() {
                 transform: menu ? 'translateX(0%)' : 'translateX(100%)',
             }}
             ref={ref}
-            className='bg-white px-6  dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed top-0 bottom-0 right-0 left-1/4 md:hidden z-10'
+            className='bg-white px-6 dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed inset-0 md:hidden z-10'
         >
             <p className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
             <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
