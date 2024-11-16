@@ -169,7 +169,7 @@ const projects = [
         translate_y_percent: 'translate-y-[-26%]',
         source_code: "https://github.com/iamsuryasonar/markdown_blog_app.git",
         title: "Web Snippets",
-        url: "https://websnippet.vercel.app/",
+        url: "https://websnippets.vercel.app/",
         description:
             "This project is a static blog site implemented using Next.js, to generate static pages effortlessly from markdown files residing in the public folder.",
     },
