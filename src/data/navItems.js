@@ -2,7 +2,7 @@ const navItems = [
     {
         id: 1,
         title: 'Blog',
-        path: 'https://websnippet.vercel.app/'
+        path: 'https://websnippets.vercel.app/'
     },
     // {
     //     id: 2,
