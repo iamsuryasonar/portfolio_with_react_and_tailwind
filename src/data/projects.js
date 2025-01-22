@@ -1,11 +1,11 @@
-import uniurl from '../assets/projects/uniurl.png'
+import uniurl from '../assets/projects/uniurl.webp'
 import cryptorank from '../assets/projects/cryptorank.jpg'
 import notebook from '../assets/projects/notebook.jpg'
-import portfolio from '../assets/projects/portfolio.jpg'
+import portfolio from '../assets/projects/portfolio.webp'
 import temp_message from '../assets/projects/temp_message.jpg'
 import weatherapp from '../assets/projects/weatherapp.jpg'
-import limostore from '../assets/projects/limostore.png'
-import websnippets from '../assets/projects/websnippets.png'
+import limostore from '../assets/projects/limostore.webp'
+import websnippets from '../assets/projects/websnippets.webp'
 import passwordVault from '../assets/projects/password_vault.png'
 
 const projects = [
@@ -43,7 +43,7 @@ const projects = [
         ],
         id: "LIMOSTORE",
         image: limostore,
-        translate_y_percent: 'translate-y-[-64%]',
+        translate_y_percent: 'translate-y-[-74%]',
         source_code: "https://github.com/iamsuryasonar/Apparel-store-limo.git",
         build_info:
             "Built with NodeJs,Express, MongoDb, React, Redux and Tailwind",
@@ -119,7 +119,7 @@ const projects = [
         ],
         id: "UNIURL",
         image: uniurl,
-        translate_y_percent: 'translate-y-[-67%]',
+        translate_y_percent: 'translate-y-[-47%]',
         source_code: "https://github.com/iamsuryasonar/urlshare-react.git",
         build_info:
             "Built with NodeJs, MongoDb, React, Redux and CSS",
@@ -166,7 +166,7 @@ const projects = [
         ],
         id: "WEBSNIPPETS",
         image: websnippets,
-        translate_y_percent: 'translate-y-[-26%]',
+        translate_y_percent: 'translate-y-[-30%]',
         source_code: "https://github.com/iamsuryasonar/markdown_blog_app.git",
         title: "Web Snippets",
         url: "https://websnippets.vercel.app/",

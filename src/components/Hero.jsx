@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import text from '../data/text'
-import profilePicture from '../assets/dp.jpg'
+import profilePicture from '../assets/dp.webp'
 import skills from "../data/skills"
 import media from '../data/media'
 import Slider from './Slider'
