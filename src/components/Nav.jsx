@@ -42,7 +42,7 @@ function Nav() {
                     })}
                     <Link to='/links' className="text-base hover:text-green-500  dark:text-white hover:underline underline-offset-4 ">Links</Link>
                 </div>
-                <button onClick={() => toggle()}
+                <button className='p-1' onClick={() => toggle()}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             toggle()
@@ -68,6 +68,7 @@ function Nav() {
         >
             <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
             <button
+                className='p-1 fixed top-7 right-6'
                 onClick={() => toggle()}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
@@ -75,7 +76,7 @@ function Nav() {
                     }
                 }}
                 aria-label='close menu'>
-                <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
+                <FontAwesomeIcon className="z-20 outline-none text-3xl hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
                     icon={faXmark}
                 />
             </button>
