@@ -65,7 +65,7 @@ function Hero() {
                 </div>
                 <div className="w-64 h-64">
                     <div className={`w-[250px] h-[250px] rounded-full  ${loadedImages.includes(profilePicture) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
-                        <img alt='profile picture of Surya Sonar' className={`w-[250px] h-[250px] object-cover rounded-full ${loadedImages.includes(profilePicture) ? 'block' : ' hidden'}`} src={profilePicture} onLoad={() => handleImageLoad(profilePicture)}></img>
+                        <img alt='profile picture of Surya Sonar' width={250} height={250} className={`object-cover rounded-full ${loadedImages.includes(profilePicture) ? 'block' : ' hidden'}`} src={profilePicture} onLoad={() => handleImageLoad(profilePicture)}></img>
                     </div>
                 </div>
             </div>
