@@ -20,7 +20,7 @@ function Image({ image, index }) {
         className='w-full h-full mb-4 relative grid rounded-lg translate-y-[50px] opacity-0 transition-all duration-500 ease-in-out'
         key={image.id}>
         <div className={`${loadedImages.includes(index) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
-            <img src={image.image} loading='lazy' onLoad={() => handleImageLoad(index)}></img>
+            <img src={image.image} alt={image.quote} loading='lazy' onLoad={() => handleImageLoad(index)}></img>
         </div>
         <div className='grid place-content-center absolute top-0 left-0 right-0 bottom-0  bg-black opacity-0 hover:opacity-65 transition-opacity duration-300'>
             <div className='grid p-6'>

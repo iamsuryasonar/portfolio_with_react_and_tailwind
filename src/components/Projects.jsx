@@ -37,7 +37,7 @@ function Project(props) {
             className="max-w-4xl translate-y-[50px] opacity-0 mx-6 flex flex-col gap-4 transition-all duration-700 ease-in-out">
             <div className="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900 rounded-lg shadow-lg md:grid md:grid-cols-6">
                 <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
-                    <img className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
+                    <img alt={`ui screenshot of ${projectName}`} className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
                         src={image}
                         loading='lazy'
                         onLoad={() => handleImageLoad(id)}
@@ -54,9 +54,9 @@ function Project(props) {
                         })}
                     </div>
                     <div className="w-full flex flex-row justify-around">
-                        <a href={source_code} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                        <a aria-label="view source code in github" href={source_code} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                         {
-                            live_url && <a href={live_url} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                            live_url && <a aria-label="preview project" href={live_url} target="_blank" rel="noopener" className='hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white dark:text-white border border-1 border-slate-400 px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
                         }
                     </div>
                 </div>
@@ -73,7 +73,7 @@ function MiniProjects({ project }) {
 
 
     return (
-        <div
+        <li
             ref={ref}
             style={{
                 transform: isVisible ? 'translateY(0%)' : '',
@@ -83,14 +83,14 @@ function MiniProjects({ project }) {
             <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] dark:border-slate-600 border-slate-400 dark:text-white font-light text-sm'>
                 <span className='flex items-center gap-2'>
                     <FontAwesomeIcon icon={faBook} className='' />
-                    <a href={project.source_code} target='_blank' className='text-green-500 hover:underline'>{project.title}</a>
+                    <a aria-label="view source code in github" href={project.source_code} target='_blank' className='text-green-500 hover:underline'>{project.title}</a>
                 </span>
                 <p className=''>{project.description}</p>
                 <div className='flex items-center flex-wrap gap-4'>
                     <div className='flex flex-wrap gap-4'>
                         {
                             project.techs.map((item) => {
-                                return <div className='flex items-center gap-1'>
+                                return <div key={item.id} className='flex items-center gap-1'>
                                     <div
                                         className="w-3 h-3 rounded-full"
                                         style={{ backgroundColor: randomColor() }}>
@@ -100,12 +100,12 @@ function MiniProjects({ project }) {
                             })
                         }
                     </div>
-                    <a href={project.source_code} target='_blank' className='group w-6 h-6 flex justify-center items-center border rounded-full border-slate-400 hover:border-green-600'>
+                    <a aria-label="view source code in github" href={project.source_code} target='_blank' className='group w-6 h-6 flex justify-center items-center border rounded-full border-slate-400 hover:border-green-600'>
                         <FontAwesomeIcon icon={faGithub} className='group-hover:text-green-600' />
                     </a>
                 </div>
             </div>
-        </div>
+        </li>
     )
 }
 
@@ -135,7 +135,7 @@ function Projects() {
                 <ol className='max-w-[816px] w-full flex flex-col lg:grid lg:grid-cols-2 gap-4'>
                     {
                         miniProjects.map((item) => {
-                            return <MiniProjects project={item} />
+                            return <MiniProjects key={item.id} project={item} />
                         })
                     }
                 </ol>

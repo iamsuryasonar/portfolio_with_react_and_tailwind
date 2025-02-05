@@ -11,10 +11,6 @@ function Certificate({ certificate }) {
         setLoadedImages((prevLoadedImages) => [...prevLoadedImages, index]);
     };
 
-    const redirectToCertification = (url) => {
-        window.open(url, '_blank');
-    }
-
     return <div key={certificate.id}
         ref={ref}
         style={{
@@ -23,10 +19,10 @@ function Certificate({ certificate }) {
         }}
         className='flex flex-col gap-4 translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out md:grid md:grid-cols-7 md:gap-12'>
         <div onClick={() => redirectToCertification(certificate.url)} className={`col-start-1 col-span-3 hover:shadow-md hover:scale-105 transition-all duration-300 rounded-xl cursor-pointer ${loadedImages.includes(certificate.id) ? 'animate-none bg-slate-100' : 'bg-slate-100 animate-pulse'} `}>
-            <img className={`object-cover rounded-xl ${loadedImages.includes(certificate.id) ? 'block' : ' hidden'}`} src={certificate.image} onLoad={() => handleImageLoad(certificate.id)}></img>
+            <img alt={`${certificate.title} certificate`} className={`object-cover rounded-xl ${loadedImages.includes(certificate.id) ? 'block' : ' hidden'}`} src={certificate.image} onLoad={() => handleImageLoad(certificate.id)}></img>
         </div>
         <div className="flex flex-col items-start gap-4 col-start-4 col-span-4">
-            <p onClick={() => redirectToCertification(certificate.url)} className="hover:text-green-500 font-bold dark:text-white cursor-pointer duration-500 transition-all ease-in-out">{certificate.title}</p>
+            <a aria-label="link to cerificate" href={certificate.url} target="_blank" rel="noopener" className='hover:text-green-500 font-bold dark:text-white cursor-pointer duration-500 transition-all ease-in-out'>{certificate.title} </a>
             <p className="text-base text-slate-500 ">{certificate.description}</p>
         </div>
     </div>

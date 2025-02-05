@@ -14,7 +14,7 @@ function Skill(props) {
     return <div
         key={skill.id}
         className={`w-[60px] aspect-square mx-2 text-2xl rounded-full ${loadedImages.includes(skill.id) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `} >
-        <img src={skill.image} className={`object-cover rounded-sm aspect-square ${loadedImages.includes(skill.id) ? ' block' : ' hidden'}`} onLoad={() => handleImageLoad(skill.id)} />
+        <img alt={skill.id} src={skill.image} className={`object-cover rounded-sm aspect-square ${loadedImages.includes(skill.id) ? ' block' : ' hidden'}`} onLoad={() => handleImageLoad(skill.id)} />
     </div>
 }
 
@@ -48,7 +48,7 @@ function Hero() {
                         <div className="flex flex-row justify-center md:justify-start gap-4 ">
                             {media.map((item) => {
                                 return (
-                                    <a target='_blank' rel='noopener noreferrer' className='text-3xl' href={item.url} key={item.id}>
+                                    <a aria-label={`visit ${item.name} account`} target='_blank' rel='noopener noreferrer' className='text-3xl' href={item.url} key={item.id}>
                                         <FontAwesomeIcon className='text-3xl hover:scale-125 transition-all duration-300 ease-in-out dark:text-white' icon={item.icon} />
                                     </a>
                                 )
@@ -65,7 +65,7 @@ function Hero() {
                 </div>
                 <div className="w-64 h-64">
                     <div className={`w-[250px] h-[250px] rounded-full  ${loadedImages.includes(profilePicture) ? 'animate-none ' : 'bg-slate-100 animate-pulse'} `}>
-                        <img className={`w-[250px] h-[250px] object-cover rounded-full ${loadedImages.includes(profilePicture) ? 'block' : ' hidden'}`} src={profilePicture} onLoad={() => handleImageLoad(profilePicture)}></img>
+                        <img alt='profile picture of Surya Sonar' className={`w-[250px] h-[250px] object-cover rounded-full ${loadedImages.includes(profilePicture) ? 'block' : ' hidden'}`} src={profilePicture} onLoad={() => handleImageLoad(profilePicture)}></img>
                     </div>
                 </div>
             </div>

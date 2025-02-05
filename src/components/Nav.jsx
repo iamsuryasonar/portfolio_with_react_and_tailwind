@@ -42,15 +42,17 @@ function Nav() {
                     })}
                     <Link to='/links' className="text-base hover:text-green-500  dark:text-white hover:underline underline-offset-4 ">Links</Link>
                 </div>
-                <FontAwesomeIcon className="text-2xl outline-none md:hidden hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
-                    icon={faBars}
-                    onClick={() => toggle()}
-                    tabIndex={0}
+                <button onClick={() => toggle()}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             toggle()
                         }
-                    }} />
+                    }}
+                    aria-label='open menu'>
+                    <FontAwesomeIcon className="text-2xl outline-none md:hidden hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
+                        icon={faBars}
+                    />
+                </button>
             </div>
         </div>
         <div className="z-20 h-[1px] bg-slate-100  dark:bg-slate-900 w-full">
@@ -59,26 +61,30 @@ function Nav() {
         {/* menu */}
         <div
             style={{
-                transform: menu ? 'translateX(0%)' : 'translateX(100%)',
+                transform: menu ? 'translateX(0%)' : 'translateX(120%)',
             }}
             ref={ref}
             className='bg-white px-6 dark:bg-slate-950 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed inset-0 md:hidden z-10'
         >
-            <p className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
-            <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
-                icon={faXmark}
+            <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-slate-50 dark:text-slate-900">iamsuryasonar<span className="text-green-100 dark:text-green-900">.dev</span></p>
+            <button
                 onClick={() => toggle()}
-                tabIndex={0}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                         toggle()
                     }
-                }} />
+                }}
+                aria-label='close menu'>
+                <FontAwesomeIcon className="z-20 outline-none text-3xl fixed top-7 right-6 hover:scale-125 transition-all duration-300 ease-in-out dark:text-white cursor-pointer"
+                    icon={faXmark}
+                />
+            </button>
             <div
                 className='w-full text-3xl font-extrabold font-sans border-r-[2px] border-green-500 border-opacity-75 pr-4 z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
                 style={{
                     transform: menu ? 'translateX(0%)' : 'translateX(100%)',
-                }}>
+                }}
+            >
                 {navItems.map((item) => {
                     return <React.Fragment key={item.id}>
                         <a
