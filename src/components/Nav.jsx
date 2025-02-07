@@ -129,7 +129,11 @@ function ThemeCard({ item, setShowThemes, textColor, bgColor }) {
         setShowThemes(false);
     }
 
-    return <li onClick={() => setTheme(item)} className={`flex gap-2 items-center px-4 py-1 bg-[${bgColor}] text-[${textColor}] shadow-secondary shadow-xl rounded-md hover:scale-x-[1.1] transition-transform duration-400 ease-in-out cursor-pointer`}>
+    return <li onClick={() => setTheme(item)}
+        style={{
+            backgroundColor: bgColor,
+            color: textColor,
+        }} className={`flex gap-2 items-center px-4 py-1 shadow-secondary shadow-xl rounded-md hover:scale-x-[1.1] transition-transform duration-400 ease-in-out cursor-pointer`}>
         {
             (item === theme) && <FontAwesomeIcon icon={faCheck} />
         }
