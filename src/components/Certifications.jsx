@@ -22,8 +22,8 @@ function Certificate({ certificate }) {
             <img alt={`${certificate.title} certificate`} className={`object-cover rounded-xl ${loadedImages.includes(certificate.id) ? 'block' : ' hidden'}`} src={certificate.image} onLoad={() => handleImageLoad(certificate.id)}></img>
         </div>
         <div className="flex flex-col items-start gap-4 col-start-4 col-span-4">
-            <a aria-label="link to cerificate" href={certificate.url} target="_blank" rel="noopener" className='hover:text-green-500 font-bold dark:text-white cursor-pointer duration-500 transition-all ease-in-out'>{certificate.title} </a>
-            <p className="text-base text-slate-500 ">{certificate.description}</p>
+            <a aria-label="link to certificate" href={certificate.url} target="_blank" rel="noopener" className='hover:text-accent font-bold text-typography cursor-pointer duration-500 transition-all ease-in-out'>{certificate.title} </a>
+            <p className="text-base text-typography opacity-60 ">{certificate.description}</p>
         </div>
     </div>
 }
@@ -31,12 +31,12 @@ function Certificate({ certificate }) {
 
 function Certifications() {
 
-    return <section id='certificates' className="py-16 w-full min-h-svh bg-white dark:bg-slate-900 flex flex-col items-center justify-center ">
+    return <section id='certificates' className="py-16 w-full min-h-svh  bg-primary flex flex-col items-center justify-center ">
         <div className="max-w-4xl mx-6">
             <div className="flex flex-col items-start">
                 <div className='flex items-center gap-2 py-4'>
-                    <div className='w-8 h-[3px] bg-green-500'></div>
-                    <p className="uppercase font-bold text-2xl text-green-500">Certificates</p>
+                    <div className='w-8 h-[3px] bg-accent'></div>
+                    <p className="uppercase font-bold text-2xl text-accent">Certificates</p>
                 </div>
                 <div className="flex flex-col gap-12 ">
                     {

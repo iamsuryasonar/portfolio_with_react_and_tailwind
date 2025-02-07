@@ -4,6 +4,7 @@ import NavAndOutlet from './components/NavAndOutlet'
 import LinkPage from './pages/LinkPage'
 import React from 'react';
 import ThemeProvider from './contexts/ThemeProvider'
+import './App.css';
 
 function App() {
   return (

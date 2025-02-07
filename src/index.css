@@ -2,10 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    :root {
+        --color-primary: #f8fafc;
+        --color-secondary: #f0f0f0;
+        --color-accent: #22c55e;
+        --color-typography: black;
+        --color-buttonBg: #f0f0f0;
+        --color-buttonText: black;
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #f8fafc 99%, #f8fafc 100%);
+    }
+
+    html[data-theme="dark"] {
+        --color-primary: #010519;
+        --color-secondary: #0f182c;
+        --color-buttonBg: #0f1f40;
+        --color-buttonText: white;
+        --color-typography: white;
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #020617 99%, #000000 100%)
+    }
+
+    html[data-theme="cupcake"] {
+        --color-primary: #EFEAE6;
+        --color-secondary: #FAF7F5;
+        --color-typography: #030303;
+        --color-accent: #FF5861;
+        --color-buttonBg: #FAF7F5;
+        --color-buttonText: #030303;
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #EFEAE6 99%, #EFEAE6 100%);
+    }
+
+    html[data-theme="aqua"] {
+        --color-primary: #345DA7;
+        --color-secondary: #2E5498;
+        --color-typography: #D4DEEF;
+        --color-accent: #FF5861;
+        --color-buttonBg: #FAF7F5;
+        --color-buttonText: #030303;
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #345DA7 99%, #345DA7 100%);
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
-
 
 @layer utilities {
     @keyframes rotateGradient {

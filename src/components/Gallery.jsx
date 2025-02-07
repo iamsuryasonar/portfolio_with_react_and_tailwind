@@ -24,8 +24,8 @@ function Image({ image, index }) {
         </div>
         <div className='grid place-content-center absolute top-0 left-0 right-0 bottom-0  bg-black opacity-0 hover:opacity-65 transition-opacity duration-300'>
             <div className='grid p-6'>
-                <p className='place-self-end text-white font-normal font-base' >{image.quote}</p>
-                <p className='place-self-end text-white font-light text-sm'><FontAwesomeIcon icon={faLocationDot} /> {image.location}</p>
+                <p className='place-self-end text-typography font-normal font-base' >{image.quote}</p>
+                <p className='place-self-end text-typography font-light text-sm'><FontAwesomeIcon icon={faLocationDot} /> {image.location}</p>
             </div>
         </div>
     </div>
@@ -33,18 +33,18 @@ function Image({ image, index }) {
 
 function Gallery() {
 
-    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 bg-slate-50 dark:bg-slate-950">
+    return <section id='gallery' className="py-16 min-h-svh w-full flex flex-col items-center gap-16 bg-primary">
         <div className='max-w-3xl'>
             <div className="p-6 flex flex-col items-center">
                 <div className='place-self-start flex items-center gap-2'>
-                    <div className='w-8 h-[3px] bg-green-500'></div>
-                    <p className="py-4 place-self-start uppercase font-bold text-green-500 text-2xl">Gallery</p>
+                    <div className='w-8 h-[3px] bg-accent'></div>
+                    <p className="py-4 place-self-start uppercase font-bold text-accent text-2xl">Gallery</p>
                 </div>
                 <div className='flex flex-col place-self-end'>
-                    <p className="place-self-end text-xl font-medium text-slate-600">
+                    <p className="place-self-end text-xl font-medium text-typography opacity-60">
                         <span className='text-2xl'>"</span>You don't take a photograph, you make it.<span className='text-2xl'>"</span>
                     </p>
-                    <span className='place-self-end text-slate-500 font-light'>- Ansel Adam</span>
+                    <span className='place-self-end text-typography opacity-60 font-light'>- Ansel Adam</span>
                 </div>
             </div>
             <div
