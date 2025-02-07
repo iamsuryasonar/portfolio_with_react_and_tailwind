@@ -5,7 +5,7 @@ import Project from './Project';
 
 function Projects() {
     return <>
-        <section id='projects' className="py-24 min-h-svh w-full bg-primary flex flex-col items-center gap-12">
+        <section id='projects' className="py-24 min-h-svh w-full bg-base-100 flex flex-col items-center gap-12">
             <div className='flex flex-col items-center gap-16'>
                 <div className="max-w-4xl p-6 flex flex-col items-center">
                     <div className='place-self-start flex items-center gap-2'>

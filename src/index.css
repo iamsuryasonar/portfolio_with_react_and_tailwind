@@ -5,42 +5,43 @@
 
 @layer base {
     :root {
-        --color-primary: #f8fafc;
-        --color-secondary: #f0f0f0;
-        --color-accent: #22c55e;
+        --color-primary: #f2f2f2;
+        --color-primary-content: #2b3440;
+        --color-base-100: #ffffff;
+        --color-base-200: #f1f1f1;
+        --color-accent: #00d3be;
         --color-typography: black;
-        --color-buttonBg: #f0f0f0;
-        --color-buttonText: black;
-        --color-gradient: linear-gradient(90deg, #00000000 85%, #f8fafc 99%, #f8fafc 100%);
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #ffffff 99%, #ffffff 100%);
     }
 
     html[data-theme="dark"] {
-        --color-primary: #010519;
-        --color-secondary: #0f182c;
-        --color-buttonBg: #0f1f40;
-        --color-buttonText: white;
+        --color-primary: #191e24;
+        --color-primary-content: #eeeeee;
+        --color-base-100: #191e24;
+        --color-base-200: #12171d;
+        --color-accent: #00cab6;
         --color-typography: white;
-        --color-gradient: linear-gradient(90deg, #00000000 85%, #020617 99%, #000000 100%)
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #191e24 99%, #191e24 100%)
     }
 
     html[data-theme="cupcake"] {
-        --color-primary: #EFEAE6;
-        --color-secondary: #FAF7F5;
+        --color-primary: #efeae6;
+        --color-primary-content: #030303;
+        --color-base-100: #faf7f5;
+        --color-base-200: #efeae6;
+        --color-accent: #eeaf3a;
         --color-typography: #030303;
-        --color-accent: #FF5861;
-        --color-buttonBg: #FAF7F5;
-        --color-buttonText: #030303;
-        --color-gradient: linear-gradient(90deg, #00000000 85%, #EFEAE6 99%, #EFEAE6 100%);
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #faf7f5 99%, #faf7f5 100%);
     }
 
     html[data-theme="aqua"] {
-        --color-primary: #345DA7;
-        --color-secondary: #2E5498;
+        --color-primary: #09ecf3;
+        --color-primary-content: #d4deef;
+        --color-base-100: #345da7;
+        --color-base-200: #2e5497;
+        --color-accent: #ff6f98;
         --color-typography: #D4DEEF;
-        --color-accent: #FF5861;
-        --color-buttonBg: #FAF7F5;
-        --color-buttonText: #030303;
-        --color-gradient: linear-gradient(90deg, #00000000 85%, #345DA7 99%, #345DA7 100%);
+        --color-gradient: linear-gradient(90deg, #00000000 85%, #345da7 99%, #345da7 100%);
     }
 }
 

@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useRef, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState, useRef, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { faBars, faCheck, faPalette, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ThemeContext } from '../contexts/ThemeProvider'
-import useScrollIndicator from '../hooks/useScrollIndicator'
-import useOnOutsideClick from '../hooks/useOnOutsideClick'
-import navItems from '../data/navItems'
+import { ThemeContext } from '../contexts/ThemeProvider';
+import useScrollIndicator from '../hooks/useScrollIndicator';
+import useOnOutsideClick from '../hooks/useOnOutsideClick';
+import navItems from '../data/navItems';
 import useScrollDirection from '../hooks/useScrollDirection';
 
 function Nav() {
@@ -21,13 +21,19 @@ function Nav() {
         setShowThemes(false);
     });
 
+    useEffect(() => {
+        if (scrollDirection === 'down') {
+            setShowThemes(false);
+        }
+    }, [scrollDirection])
+
     const [showThemes, setShowThemes] = useState(false);
 
     const toggle = () => {
         setMenu(!menu);
     };
 
-    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-primary font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
+    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-base-100 shadow-sm font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
         <div className="h-full px-6 flex flex-row justify-between items-center">
             <a href="/#home" className="text-xl font-bold hover:text-accent transition-all duration-300 ease-in-out text-typography">iamsuryasonar<span className="text-accent">.dev</span></a>
             <div className="flex justify-between items-center gap-6">
@@ -37,11 +43,11 @@ function Nav() {
                         <p className='hidden md:block'>Theme</p>
                     </button>
                     {
-                        showThemes && <ul className='fixed top-[65px] right-10 md:right-auto w-[150px] flex flex-col gap-2 p-2 bg-primary rounded-md'>
-                            <ThemeCard item={'light'} setShowThemes={setShowThemes} textColor={'black'} bgColor={'#f1f1f2'} />
-                            <ThemeCard item={'dark'} setShowThemes={setShowThemes} textColor={'white'} bgColor={'#171a2a'} />
-                            <ThemeCard item={'cupcake'} setShowThemes={setShowThemes} textColor={'#030303'} bgColor={'#e5ded9'} />
-                            <ThemeCard item={'aqua'} setShowThemes={setShowThemes} textColor={'#D4DEEF'} bgColor={'#2d549c'} />
+                        showThemes && <ul className='fixed top-[70px] right-10 md:right-auto w-[150px] flex flex-col gap-2 p-2 bg-base-200 shadow-md rounded-md'>
+                            <ThemeCard item={'light'} setShowThemes={setShowThemes} textColor={'#2b3440'} bgColor={'#f1f1f1'} />
+                            <ThemeCard item={'dark'} setShowThemes={setShowThemes} textColor={'#eeeeee'} bgColor={'#12171d'} />
+                            <ThemeCard item={'cupcake'} setShowThemes={setShowThemes} textColor={'#030303'} bgColor={'#efeae6'} />
+                            <ThemeCard item={'aqua'} setShowThemes={setShowThemes} textColor={'#d4deef'} bgColor={'#2e5497'} />
                         </ul>
                     }
                 </div>
@@ -65,8 +71,8 @@ function Nav() {
                 </button>
             </div>
         </div>
-        <div className="z-20 h-[1px] bg-secondary w-full">
-            <div style={{ width: scrollPercentage + "%" }} className="h-[1px] bg-accent"></div>
+        <div className="z-20 h-[1px] bg-base-100-100 w-full">
+            <div style={{ width: scrollPercentage + "%" }} className="h-[2px] bg-accent"></div>
         </div>
         {/* menu */}
         <div
@@ -74,9 +80,9 @@ function Nav() {
                 transform: menu ? 'translateX(0%)' : 'translateX(120%)',
             }}
             ref={ref}
-            className='bg-primary px-6 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed inset-0 md:hidden z-10'
+            className='bg-base-100 px-6 transition-all duration-700 ease-in-out flex flex-col justify-center items-center gap-6 h-screen fixed inset-0 md:hidden z-10'
         >
-            <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-secondary opacity-80">iamsuryasonar<span className="text-accent opacity-20">.dev</span></p>
+            <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-base-200 opacity-40">iamsuryasonar<span className="text-accent opacity-40">.dev</span></p>
             <button
                 className='p-1 fixed top-7 right-6'
                 onClick={() => toggle()}
@@ -133,7 +139,7 @@ function ThemeCard({ item, setShowThemes, textColor, bgColor }) {
         style={{
             backgroundColor: bgColor,
             color: textColor,
-        }} className={`flex gap-2 items-center px-4 py-1 shadow-secondary shadow-xl rounded-md hover:scale-x-[1.1] transition-transform duration-400 ease-in-out cursor-pointer`}>
+        }} className={`flex gap-2 items-center px-4 py-1 shadow-md rounded-md hover:scale-x-[1.1] transition-transform duration-400 ease-in-out cursor-pointer`}>
         {
             (item === theme) && <FontAwesomeIcon icon={faCheck} />
         }

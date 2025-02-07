@@ -17,7 +17,7 @@ function MiniProjects({ project }) {
                 opacity: isVisible ? '1' : '',
             }}
             className="w-full h-full translate-y-[50px] opacity-0 transition-all duration-700 ease-in-out ">
-            <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] dark:border-slate-600 border-slate-400 text-typography font-light text-sm'>
+            <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] border-typography text-typography font-light text-sm'>
                 <span className='flex items-center gap-2'>
                     <FontAwesomeIcon icon={faBook} className='' />
                     <a aria-label="view source code in github" href={project.source_code} target='_blank' className='text-accent hover:underline'>{project.title}</a>
@@ -37,7 +37,7 @@ function MiniProjects({ project }) {
                             })
                         }
                     </div>
-                    <a aria-label="view source code in github" href={project.source_code} target='_blank' className='group w-6 h-6 flex justify-center items-center border rounded-full border-slate-400 hover:border-green-600'>
+                    <a aria-label="view source code in github" href={project.source_code} target='_blank' className='group w-6 h-6 flex justify-center items-center border rounded-full border-typography hover:border-accent'>
                         <FontAwesomeIcon icon={faGithub} className='group-hover:text-accent' />
                     </a>
                 </div>

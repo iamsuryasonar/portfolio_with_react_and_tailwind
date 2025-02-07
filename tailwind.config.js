@@ -10,14 +10,16 @@ export default {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
+        'primary-content': 'var(--color-primary-content)',
+        'base-100': 'var(--color-base-100)',
+        'base-200': 'var(--color-base-200)',
         accent: 'var(--color-accent)',
         buttonBg: 'var(--color-buttonBg)',
         buttonText: 'var(--color-buttonText)',
         typography: 'var(--color-typography)',
       },
       backgroundImage: {
-        gradient: 'var(--color-gradient)'
+        gradient: 'var(--color-gradient)',
       }
     },
   },
