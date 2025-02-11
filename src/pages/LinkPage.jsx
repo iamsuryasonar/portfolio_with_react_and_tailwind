@@ -21,7 +21,7 @@ function LinkPage() {
                         <a key={link.id} target='_blank'
                             rel='noopener noreferrer'
                             href={link.url}
-                            className='w-11/12 hover:scale-105 p-10 bg-base-100-100 border-primary border-[1px] flex justify-center items-center transition-all duration-300 ease-in-out'
+                            className='w-11/12 hover:scale-[1.03] p-10 bg-base-100 border-accent border-[1px] flex justify-center items-center transition-all duration-400 ease-in-out'
                         >
                             <p className='text-typography text-xl'>
                                 {link.title}
