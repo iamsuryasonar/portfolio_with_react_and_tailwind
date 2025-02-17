@@ -35,8 +35,8 @@ function Nav() {
             <a href="/#home" className="text-xl font-bold hover:text-accent transition-all duration-300 ease-in-out text-typography">iamsuryasonar<span className="text-accent">.dev</span></a>
             <div className="flex justify-between items-center gap-4">
                 <div ref={themesRef}>
-                    <button onClick={() => setShowThemes(!showThemes)} className='md:hidden text-base hover:text-accent text-typography hover:underline underline-offset-4'>
-                        <FontAwesomeIcon className=' text-2xl outline-none hover:scale-125 transition-all duration-300 ease-in-out text-typography cursor-pointer' icon={faPalette} />
+                    <button onClick={() => setShowThemes(!showThemes)} className='text-base hover:text-accent text-typography hover:underline underline-offset-4'>
+                        <FontAwesomeIcon className='md:hidden text-2xl outline-none hover:scale-125 transition-all duration-300 ease-in-out text-typography cursor-pointer' icon={faPalette} />
                         <p className='hidden md:block'>Theme</p>
                     </button>
                     {

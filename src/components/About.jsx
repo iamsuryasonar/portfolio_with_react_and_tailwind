@@ -18,7 +18,7 @@ function About() {
                     <div className='w-8 h-[3px] bg-accent'></div>
                     <p className="uppercase font-bold text-2xl text-accent">About Me</p>
                 </div>
-                <p className=" font-bold text-typography">{text.about_title}</p>
+                <p className="font-bold text-typography">{text.about_title}</p>
                 <p className="text-base text-typography opacity-60">{text.about_me}</p>
             </div>
         </div>
