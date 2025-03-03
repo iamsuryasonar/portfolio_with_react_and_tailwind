@@ -1,10 +1,10 @@
 const socialMedia = [
-    {
-        id: '1',
-        name: 'instagram',
-        url: 'https://instagram.com/iamsuryasonar',
-        icon: 'fab fa-instagram',
-    },
+    // {
+    //     id: '1',
+    //     name: 'instagram',
+    //     url: 'https://instagram.com/iamsuryasonar',
+    //     icon: 'fab fa-instagram',
+    // },
     {
         id: '2',
         name: 'linkedin',

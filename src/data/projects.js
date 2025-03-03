@@ -236,6 +236,28 @@ const projects = [
 
 const miniProjects = [
     {
+        id: "Chatify Chat",
+        techs: [
+            {
+                id: 'tailwindcss',
+                tech: "tailwind CSS",
+            },
+            {
+                id: 'react',
+                tech: "react",
+            },
+            {
+                id: 'firestore',
+                tech: "firestore",
+            }
+        ],
+        source_code: "https://github.com/iamsuryasonar/chatify-chat-app.git",
+        title: "Chatify chat",
+        url: "https://chatifyi.netlify.app/sign-in",
+        description:
+            "Realtime text messaging application.",
+    },
+    {
         id: "Group Chat",
         techs: [
             {

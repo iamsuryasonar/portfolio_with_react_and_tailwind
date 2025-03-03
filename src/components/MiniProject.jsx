@@ -20,7 +20,7 @@ function MiniProjects({ project }) {
             <div className='h-full p-4 flex flex-col gap-4 rounded-md border-[1px] border-typography text-typography font-light text-sm'>
                 <span className='flex items-center gap-2'>
                     <FontAwesomeIcon icon={faBook} className='' />
-                    <a aria-label="view source code in github" href={project.source_code} target='_blank' className='text-accent hover:underline'>{project.title}</a>
+                    <a aria-label="view source code in github or preview if preview is available" href={project?.url ? project?.url : project?.source_code} target='_blank' className='text-accent hover:underline'>{project.title}</a>
                 </span>
                 <p className='text-typography opacity-60'>{project.description}</p>
                 <div className='flex items-center flex-wrap gap-4'>
