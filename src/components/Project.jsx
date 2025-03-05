@@ -31,8 +31,8 @@ function Project(props) {
                 transform: isVisible ? 'translateY(0%)' : '',
                 opacity: isVisible ? '1' : '',
             }}
-            className="max-w-4xl translate-y-[50px] opacity-0 mx-6 flex flex-col gap-4 transition-transform duration-700 ease-in-out">
-            <div className="flex flex-col gap-4 p-4 bg-base-100-200 rounded-lg shadow-lg md:grid md:grid-cols-6">
+            className="max-w-4xl translate-y-[50px] opacity-0 mx-6 flex flex-col gap-4 transition-transform duration-700 ease-in-out ">
+            <div className="flex flex-col gap-4 p-4 bg-base-200 md:grid md:grid-cols-6 rounded-lg shadow-[var(--color-shadow)_0px_9px_20px]">
                 <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-base-200 animate-pulse'} `}>
                     <img alt={`ui screenshot of ${projectName}`} className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
                         src={image}

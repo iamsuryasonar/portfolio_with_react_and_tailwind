@@ -12,7 +12,7 @@ function Projects() {
                         <div className='w-8 h-[3px] bg-accent'></div>
                         <p className="py-4 place-self-start uppercase font-bold text-accent text-2xl">Projects</p>
                     </div>
-                    <p className="place-self-start text-xl font-medium text-typography">{text.project_quote}</p>
+                    <p className="place-self-start text-xl font-medium text-typography text-wrap">{text.project_quote}</p>
                 </div>
                 {
                     projects.map((item, index) => {

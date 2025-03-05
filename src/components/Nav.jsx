@@ -30,14 +30,14 @@ function Nav() {
 
     const [showThemes, setShowThemes] = useState(false);
 
-    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-10 bg-base-100 shadow-sm font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
-        <div className="h-full px-6 flex flex-row justify-between items-center">
-            <a href="/#home" className="text-xl font-bold hover:text-accent transition-all duration-300 ease-in-out text-typography">iamsuryasonar<span className="text-accent">.dev</span></a>
+    return <div className={`h-[60px] fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-sm font-sans transition-all duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-[100%]' : 'translate-y-0'}`}>
+        <div className="max-w-7xl m-auto h-full px-6 flex flex-row justify-between items-center">
+            <a href="/#home" className="text-xl font-bold hover:text-accent transition-all duration-300 ease-in-out text-typography">suryasonar<span className="text-accent">.dev</span></a>
             <div className="flex justify-between items-center gap-4">
                 <div ref={themesRef}>
                     <button onClick={() => setShowThemes(!showThemes)} className='text-base hover:text-accent text-typography hover:underline underline-offset-4'>
                         <FontAwesomeIcon className='md:hidden text-2xl outline-none hover:scale-125 transition-all duration-300 ease-in-out text-typography cursor-pointer' icon={faPalette} />
-                        <p className='hidden md:block'>Theme</p>
+                        <p className='hidden md:block'>Themes</p>
                     </button>
                     {
                         showThemes &&
@@ -67,7 +67,7 @@ function Nav() {
                 </button>
             </div>
         </div>
-        <div className="z-20 h-[1px] bg-base-100-100 w-full">
+        <div className="z-50 h-[1px] bg-base-100-100 w-full">
             <div style={{ width: scrollPercentage + "%" }} className="h-[2px] bg-accent"></div>
         </div>
         {/* menu */}
@@ -83,9 +83,9 @@ function Nav() {
             onKeyDown={(e) => {
                 if (e.key === 'Escape') setMenu(false);
             }}
-            className='bg-base-100 px-6 transition-all duration-700 ease-in-out flex flex-col justify-center items-end gap-6 h-screen fixed inset-0 md:hidden z-10'
+            className='bg-base-100 px-6 transition-all duration-700 ease-in-out flex flex-col justify-center items-end gap-6 h-screen fixed inset-0 md:hidden z-50'
         >
-            <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-base-200 opacity-40">iamsuryasonar<span className="text-accent opacity-40">.dev</span></p>
+            <p aria-hidden='true' className="absolute -rotate-90 left-14 -translate-x-1/2 text-[100px] font-extrabold text-base-200 opacity-40">suryasonar<span className="text-accent opacity-40">.dev</span></p>
             <FocusTrap active={menu}>
                 <div>
                     {
@@ -99,13 +99,13 @@ function Nav() {
                                 }
                             }}
                             aria-label='close menu'>
-                            <FontAwesomeIcon className="z-20 outline-none text-3xl hover:scale-125 transition-all duration-300 ease-in-out text-typography cursor-pointer"
+                            <FontAwesomeIcon className="z-50 outline-none text-3xl hover:scale-125 transition-all duration-300 ease-in-out text-typography cursor-pointer"
                                 icon={faXmark}
                             />
                         </button>
                     }
                     <div
-                        className='w-full text-3xl font-extrabold font-sans border-r-[2px] border-accent border-opacity-75 pr-4 z-20 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
+                        className='w-full text-3xl font-extrabold font-sans border-r-[2px] border-accent border-opacity-75 pr-4 z-50 flex flex-col items-end gap-6 transition-all delay-300 duration-700 ease-in-out'
                         style={{
                             transform: menu ? 'translateX(0%)' : 'translateX(100%)',
                         }}
@@ -127,7 +127,7 @@ function Nav() {
                                     tabIndex={menu ? 0 : -1}
                                     to='/links'
                                     onClick={() => setMenu(false)}
-                                    className="z-20 self-end text-typography hover:text-accent transition-all duration-300 ease-in-out">
+                                    className="z-50 self-end text-typography hover:text-accent transition-all duration-300 ease-in-out">
                                     Links
                                 </Link>
                             </>

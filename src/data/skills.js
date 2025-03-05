@@ -6,7 +6,7 @@ import firebase from "../assets/dev_icons/firebase.svg";
 import figma from "../assets/dev_icons/figma.svg";
 import react from "../assets/dev_icons/react.svg";
 import flutter from "../assets/dev_icons/flutter.svg";
-import github from "../assets/dev_icons/github.svg";
+import github from "../assets/dev_icons/github.png";
 import nodejs from "../assets/dev_icons/nodejs.svg";
 import javascript from "../assets/dev_icons/javascript.svg";
 import java from "../assets/dev_icons/java.svg";

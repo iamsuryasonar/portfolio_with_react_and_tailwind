@@ -85,7 +85,7 @@ const projects = [
         source_code: "https://github.com/iamsuryasonar/passwordman.git",
         build_info:
             "Built with NodeJs, MongoDb, React, Zustand and tailwind css",
-        title: "PASSWORDvault",
+        title: "PASSWORD vault",
         url: "https://passwordvault.netlify.app/",
         description:
             "PASSWORDvault is A secure and user-friendly password manager built with React, Node.js, Express and MongoDB. This application helps users store and manage their passwords safely by encrypting sensitive data using AES encryption.",
@@ -126,7 +126,7 @@ const projects = [
         title: "UNIURL",
         url: "https://uniurl.netlify.app",
         description:
-            "UNIURL is a URL sharing platform, which enables users to share all of their URL's with a single URL. For example 'www.uniurl.com/username'.",
+            "UNIURL is a URL sharing platform, which enables users to share all of their URL's with a single URL. For example 'www.uniurl.com/ username'.",
     },
     {
         techs: [
