@@ -6,7 +6,7 @@ import skills from "../data/skills";
 import media from '../data/media';
 import Slider from './Slider';
 
-const RESUME_URL = "https://drive.google.com/file/d/1EnDoy_xiKpZf208-tj2_0lYrVCIxX7Zh/view?usp=drive_link"
+const RESUME_URL = "https://drive.google.com/file/d/1xRJYu66R9Ahx2WE9N619zfb6HLvidDcr/view?usp=drive_link"
 
 function Skill(props) {
     const { skill, loadedImages, handleImageLoad } = props;
