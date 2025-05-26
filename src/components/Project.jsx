@@ -51,9 +51,9 @@ function Project(props) {
                         })}
                     </div>
                     <div className="w-full flex flex-row justify-around">
-                        <a aria-label="view source code in github" href={source_code} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-2'>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                        <a aria-label="view source code in github" href={source_code} target="_blank" rel="noopener" className='text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-2'>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                         {
-                            live_url && <a aria-label="preview project" href={live_url} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content/25 px-2 py-1 rounded-md flex items-center gap-2'>Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
+                            live_url && <a aria-label="preview project" href={live_url} target="_blank" rel="noopener" className='text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-2'>Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
                         }
                     </div>
                 </div>

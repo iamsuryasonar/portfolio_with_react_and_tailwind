@@ -66,10 +66,9 @@ function Slider({ children, speed }) {
     }
 
     return (
-        <div className='w-full flex  z-10'
+        <div className='w-full flex z-10'
             onMouseOver={() => onHoverHandler(true)}
             onMouseLeave={() => onHoverHandler(false)}
-            onClick={() => console.log('jello')}
         >
             <div ref={originalCardsRef} className='flex' >
                 {children}
