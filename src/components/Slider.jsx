@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 function Slider({ children, speed }) {
     let originalCardsPos = 0;
@@ -8,6 +8,7 @@ function Slider({ children, speed }) {
 
     const originalCardsRef = useRef(null);
     const duplicateCardsRef = useRef(null);
+    const requestId = useRef(null);
 
     function transition(currentTimestamp) {
 
@@ -46,12 +47,14 @@ function Slider({ children, speed }) {
                 duplicateCardsPos = 0;
             }
 
-            window.requestAnimationFrame(transition);
+            if (requestId?.current) window.cancelAnimationFrame(requestId.current);
+            requestId.current = window.requestAnimationFrame(transition);
         }
     };
 
     useEffect(() => {
-        window.requestAnimationFrame(transition);
+        requestId.current = window.requestAnimationFrame(transition);
+        return () => window.cancelAnimationFrame(requestId?.current);
     }, []);
 
     function onHoverHandler(hover) {
@@ -62,19 +65,20 @@ function Slider({ children, speed }) {
         }
     }
 
-    return <>
-        <div className='w-full flex'
+    return (
+        <div className='w-full flex  z-10'
             onMouseOver={() => onHoverHandler(true)}
             onMouseLeave={() => onHoverHandler(false)}
+            onClick={() => console.log('jello')}
         >
-            <div ref={originalCardsRef} className='flex'>
+            <div ref={originalCardsRef} className='flex' >
                 {children}
             </div>
             <div ref={duplicateCardsRef} className='flex'>
                 {children}
             </div>
         </div>
-    </>
+    )
 }
 
 export default Slider;

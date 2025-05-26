@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLaptopCode, faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import useOnScreen from '../hooks/useOnScreen'
 
 function Project(props) {
@@ -32,7 +32,7 @@ function Project(props) {
                 opacity: isVisible ? '1' : '',
             }}
             className="max-w-4xl translate-y-[50px] opacity-0 mx-6 flex flex-col gap-4 transition-transform duration-700 ease-in-out ">
-            <div className="flex flex-col gap-4 p-4 bg-base-200 md:grid md:grid-cols-6 rounded-lg shadow-[var(--color-shadow)_0px_9px_20px]">
+            <div className="flex flex-col gap-4 p-4 bg-base-200 md:grid md:grid-cols-6 rounded-2xl shadow-[var(--color-shadow)_0px_9px_20px]">
                 <div className={`max-w-96 max-h-96 overflow-hidden rounded-xl col-span-3 aspect-square ${reverse_grid ? 'md:order-2 md:place-self-end' : 'md:order-1'} ${loadedImages.includes(id) ? 'animate-none ' : 'bg-base-200 animate-pulse'} `}>
                     <img alt={`ui screenshot of ${projectName}`} className={`w-full h-auto  object-cover shadow-lg ${isHover ? `${translate_y_percent}` : `translate-y-0`} transition-all duration-[3000ms] ease-in-out`}
                         src={image}
@@ -51,9 +51,9 @@ function Project(props) {
                         })}
                     </div>
                     <div className="w-full flex flex-row justify-around">
-                        <a aria-label="view source code in github" href={source_code} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-1 '>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
+                        <a aria-label="view source code in github" href={source_code} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-2'>Code <FontAwesomeIcon icon={faLaptopCode} /></a>
                         {
-                            live_url && <a aria-label="preview project" href={live_url} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content px-2 py-1 rounded-md flex items-center gap-1 '>Demo <FontAwesomeIcon icon={faRightToBracket} /></a>
+                            live_url && <a aria-label="preview project" href={live_url} target="_blank" rel="noopener" className='bg-base-100-200 text-primary-content hover:text-base-200 hover:bg-primary-content border border-1 border-primary-content/25 px-2 py-1 rounded-md flex items-center gap-2'>Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
                         }
                     </div>
                 </div>
