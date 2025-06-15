@@ -1,9 +1,9 @@
 const navItems = [
-    // {
-    //     id: 1,
-    //     title: 'Blog',
-    //     path: 'https://websnippets.vercel.app/'
-    // },
+    {
+        id: 1,
+        title: 'Blog',
+        path: 'https://websnippets.vercel.app/'
+    },
     // {
     //     id: 2,
     //     title: 'About',
@@ -19,11 +19,11 @@ const navItems = [
         title: 'Certificates',
         path: '/#certificates'
     },
-    {
-        id: 5,
-        title: 'Gallery',
-        path: '/#gallery'
-    },
+    // {
+    //     id: 5,
+    //     title: 'Gallery',
+    //     path: '/#gallery'
+    // },
 ]
 
 export default navItems

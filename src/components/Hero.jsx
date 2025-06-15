@@ -6,7 +6,7 @@ import skills from "../data/skills";
 import media from '../data/media';
 import Slider from './Slider';
 
-const RESUME_URL = "https://drive.google.com/file/d/1xRJYu66R9Ahx2WE9N619zfb6HLvidDcr/view?usp=drive_link"
+const RESUME_URL = "https://drive.google.com/file/d/1GbhysY-k_IKbgnYSE2r5Gaa7Bts8ME-w/view?usp=drive_link"
 
 function Skill(props) {
     const { skill, loadedImages, handleImageLoad } = props;
@@ -38,13 +38,13 @@ function Hero() {
                 <div className="flex flex-col-reverse py-10 lg:flex-row items-center md:justify-center gap-6 lg:gap-16">
                     <div className="flex flex-col items-center gap-6 p-2">
                         <div className="flex flex-col gap-2 ">
-                            <p className="text-4xl font-bold text-center md:text-5xl lg:text-6xl text-typography">Hi, I am <span className="text-accent">Surya Sonar</span></p>
+                            <p className="text-4xl font-bold text-center md:text-5xl lg:text-6xl text-typography">Hi, I am <span className="text-accent text-nowrap">Surya Sonar</span></p>
                             <div className="flex flex-row items-center " >
                                 <div className={`mr-2 h-2 rounded-full growline-animation bg-typography`} onAnimationEnd={onAnimationEnd} ></div>
                                 {isVisible ? <div className="w-3 h-3 rounded-full bg-accent"></div> : <div className="w-3 h-3"></div>}
                             </div>
                         </div>
-                        <p className="text-center text-xl text-typography opacity-60">{text.introduction}</p>
+                        <p className="text-center text-xl text-typography opacity-60 text-balance">{text.introduction}</p>
                         <div className="flex flex-col sm:flex sm:flex-row justify-center md:justify-start gap-2 sm:gap-4">
                             <div className="flex flex-row justify-center md:justify-start gap-4 ">
                                 {media.map((item) => {
@@ -55,7 +55,7 @@ function Hero() {
                                     )
                                 })}
                             </div>
-                            <a className='bg-base-200 text-primary-content hover:bg-accent cursor-pointer transition-colors duration-300 ease-in-out rounded-full px-4 font-medium text-2xl flex items-center justify-center'
+                            <a className='bg-accent text-typography hover:bg-accent hover:scale-[1.06] cursor-pointer transition-all duration-300 ease-in-out rounded-full px-4 font-medium text-2xl flex items-center justify-center'
                                 href={RESUME_URL}
                                 target='_blank'
                                 rel='noopener noreferrer'
@@ -77,9 +77,9 @@ function Hero() {
                 <p className="place-self-center text-nowrap md:px-4">Tech Stack </p>
             </div>
             <div className="relative w-full h-full flex overflow-hidden items-center justify-center">
-                <Slider speed={100}>
-                    {skills.map((item) => {
-                        return <Skill key={item.id} skill={item} loadedImages={loadedImages} handleImageLoad={handleImageLoad} />
+                <Slider duration={"20s"}>
+                    {[...skills, ...skills].map((item, index) => {
+                        return <Skill key={item.id + index} skill={item} loadedImages={loadedImages} handleImageLoad={handleImageLoad} />
                     })}
                 </Slider>
                 <div

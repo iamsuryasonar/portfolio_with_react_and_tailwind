@@ -1,0 +1,23 @@
+.slider_container {
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider_track {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

@@ -1,83 +1,25 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+import styles from './Slider.module.css';
 
-function Slider({ children, speed }) {
-    let originalCardsPos = 0;
-    let duplicateCardsPos = 0;
-    const copyOfSpeed = speed; // in pixels per second (rate of movement)
-    let startTimestamp; // timestamp of the first frame after the page is loaded
-
-    const originalCardsRef = useRef(null);
-    const duplicateCardsRef = useRef(null);
-    const requestId = useRef(null);
-
-    function transition(currentTimestamp) {
-
-        if (startTimestamp === undefined) {
-            startTimestamp = currentTimestamp; // currentTimestamp - represents the current time (in milliseconds) since the first frame loaded.
-        }
-
-        const deltaTime = (currentTimestamp - startTimestamp) / 1000; // time taken to complete one frame
-        startTimestamp = currentTimestamp;
-
-        const pixelsTomove = speed * deltaTime;
-
-        /* 
-            Using window.requestAnimationFrame might sometimes result in animation inconistencies.
-            For example, in deferent devices, depending on refresh rate the animation speed will vary.
-            To counter that we need to ensure that the animation adapts to such variations.
-            window.requestAnimationFrame provides parameter that represents the current time (in milliseconds) since the first frame loaded.
-            Which we can use to find time taken to complete one frame. 
-            Which when multiplied by the rate of movement(speed) gives us pixels to move.
-        */
-
-        if (originalCardsRef.current && duplicateCardsRef.current) {
-            const cardsWidth = originalCardsRef.current.offsetWidth;
-
-            originalCardsPos = originalCardsPos - pixelsTomove;
-            duplicateCardsPos = duplicateCardsPos - pixelsTomove;
-
-            originalCardsRef.current.style.transform = `translateX(${originalCardsPos}px)`;
-            duplicateCardsRef.current.style.transform = `translateX(${duplicateCardsPos}px)`;
-
-            if (originalCardsPos <= -cardsWidth) {
-                originalCardsPos = cardsWidth;
-            }
-
-            if (duplicateCardsPos <= -(cardsWidth * 2)) {
-                duplicateCardsPos = 0;
-            }
-
-            if (requestId?.current) window.cancelAnimationFrame(requestId.current);
-            requestId.current = window.requestAnimationFrame(transition);
-        }
-    };
+function Slider({ duration, children }) {
+    const ref = useRef(null);
 
     useEffect(() => {
-        requestId.current = window.requestAnimationFrame(transition);
-        return () => window.cancelAnimationFrame(requestId?.current);
-    }, []);
-
-    function onHoverHandler(hover) {
-        if (hover === true) {
-            speed = speed / 2;
-        } else {
-            speed = copyOfSpeed;
+        if (ref?.current) {
+            ref.current.style.animationDuration = duration;
         }
-    }
+    }, [ref?.current, duration]);
 
     return (
-        <div className='w-full flex z-10'
-            onMouseOver={() => onHoverHandler(true)}
-            onMouseLeave={() => onHoverHandler(false)}
-        >
-            <div ref={originalCardsRef} className='flex' >
-                {children}
-            </div>
-            <div ref={duplicateCardsRef} className='flex'>
+        <div className={`${styles.slider_container}`}>
+            <div
+                ref={ref}
+                className={`${styles.slider_track}`}
+            >
                 {children}
             </div>
         </div>
-    )
+    );
 }
 
 export default Slider;

@@ -10,7 +10,7 @@ function HomePage() {
         <About />
         <Projects />
         <Certifications />
-        <Gallery />
+        {/* <Gallery /> */}
     </>
 }
 
